@@ -1,6 +1,6 @@
 @use '../config' as *;
 
-.si-menu {
+.menu {
   align-self: stretch;
   ul {
     overflow-x: auto;
@@ -23,10 +23,10 @@
         justify-content: center;
         align-items: center;
         @extend %flexbox !optional;
-        @extend %si-regularFF-sec !optional;
+        @extend %regularFF-sec !optional;
         @include transition(background-color 0.1s linear);
         &.active {
-          @extend %si-regularFF-sec !optional;
+          @extend %regularFF-sec !optional;
           background: var(--nav-active-bg);
           color: var(--nav-active-text);
         }

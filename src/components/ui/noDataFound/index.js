@@ -6,26 +6,26 @@ import Button from '../button';
 const NoDataFound = ({ noDataThumb, noDataTitle, noDataCaption, noDataCta }) => {
   return (
     <>
-      <div className='si-noData__wrap'>
+      <div className='noData__wrap'>
         {noDataTitle && (
-          <Typo className='si-noData__title' {...noDataTitle}>
+          <Typo className='noData__title' {...noDataTitle}>
             {noDataTitle}
           </Typo>
         )}
         {noDataCaption && (
           <Typo
-            className='si-noData__caption'
+            className='noData__caption'
             dangerouslySetInnerHTML={{ __html: noDataCaption }}
             {...noDataCaption}
           ></Typo>
         )}
         {noDataThumb && (
-          <div className='si-noData__thumb'>
+          <div className='noData__thumb'>
             <Media {...noDataThumb} />
           </div>
         )}
         {noDataCta ? (
-          <div className='si-noData__cta'>
+          <div className='noData__cta'>
             <Button {...noDataCta}>{noDataCta}</Button>
           </div>
         ) : (

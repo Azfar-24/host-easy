@@ -1,28 +1,28 @@
 @use '../config' as *;
 
 //Form Input
-.si-form {
+.form {
   margin-bottom: calc(var(--gutter-space) * 4);
   position: relative;
 }
-.si-input {
+.input {
   z-index: 1;
   position: relative;
   width: 100%;
   &:valid,
-  &.si-valid {
-    .si-input__field {
+  &.valid {
+    .input__field {
       input {
         border-color: var(--ascent-success);
       }
     }
-    .si-errMsg {
+    .errMsg {
       color: var(--ascent-success);
     }
   }
   &:invalid,
-  &.si-invalid {
-    .si-input__field {
+  &.invalid {
+    .input__field {
       input {
         border-color: var(--ascent-error);
       }
@@ -33,7 +33,7 @@
   &--clear,
   &--search {
     position: relative;
-    .si-input--icon {
+    .input--icon {
       justify-content: center;
       align-items: center;
       @extend %flexbox !optional;
@@ -53,13 +53,13 @@
       &::placeholder {
         color: var(--neutral-2);
       }
-      .si-input--icon::after {
+      .input--icon::after {
         color: var(--neutral-2);
       }
     }
   }
   &--pwd {
-    .si-input--icon {
+    .input--icon {
       &::after {
         content: '\e906';
       }
@@ -73,7 +73,7 @@
   }
 
   &--clear {
-    .si-input--icon {
+    .input--icon {
       &::after {
         color: var(--neutral-3);
         content: '\e908';
@@ -115,7 +115,7 @@
     input {
       // padding-left: 40px;
     }
-    .si-input--icon {
+    .input--icon {
       &::after {
         content: '\e90c';
         color: var(--primary-2);
@@ -157,7 +157,7 @@
     left: auto;
     right: 0;
     top: 0;
-    .si-btn {
+    .btn {
       background: transparent;
     }
   }
@@ -183,8 +183,8 @@
     color: var(--input-text);
     background: var(--input-bg);
     border: var(--border-1) solid var(--input-outline);
-    @extend %si-borRad6 !optional;
-    @extend %si-regularFF !optional;
+    @extend %borRad6 !optional;
+    @extend %regularFF !optional;
     @include transition(border 0.1s linear);
     @include setProperty(font-size, 12);
     &::placeholder {
@@ -212,12 +212,12 @@
     background-image: var(--select-box-icon);
     background-position: 96%;
     background-repeat: no-repeat;
-    @extend %si-regularFF !optional;
+    @extend %regularFF !optional;
 
     option {
       color: var(--neutral-3);
       font: -moz-pull-down-menu;
-      @extend %si-regularFF !optional;
+      @extend %regularFF !optional;
       padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
       background: var(--neutral-6);
     }
@@ -225,21 +225,21 @@
   &--col {
     display: flex;
     justify-content: space-between;
-    .si-lbl {
+    .lbl {
       align-items: center;
       flex-direction: row-reverse;
       padding: 0;
-      .si-tooltip__icon {
+      .tooltip__icon {
         margin: 0;
       }
     }
-    .si-tooltip__box {
+    .tooltip__box {
       left: calc(100% + 10px);
     }
   }
 }
 
-.si-inputAdornments {
+.inputAdornments {
   padding: var(--gutter-space) calc(var(--gutter-space) * 2);
   background: var(--input-bg);
   border: var(--border-1) solid var(--input-outline);
@@ -247,8 +247,8 @@
   justify-content: flex-start;
   align-items: center;
   @extend %flexbox !optional;
-  @extend %si-borRad8 !optional;
-  .si-input {
+  @extend %borRad8 !optional;
+  .input {
     input {
       all: unset;
       height: var(--input-height);

@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='si-menu'>
+    <nav className='menu'>
       <ul>{navBar()}</ul>
     </nav>
   );

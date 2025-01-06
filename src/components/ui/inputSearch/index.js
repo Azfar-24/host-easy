@@ -5,9 +5,9 @@ import Button from '../button';
 const InputSearch = ({ searchConfig }) => {
   return (
     <>
-      <div className='si-input__search'>
+      <div className='input__search'>
         <InputField {...searchConfig} />
-        <div className='si-input__search--icon'>
+        <div className='input__search--icon'>
           <Button
             type='button'
             variant='onlyIcon'

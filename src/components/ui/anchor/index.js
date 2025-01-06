@@ -6,23 +6,23 @@ import { useNavigate } from 'react-router';
 const anchorCVA = cva('', {
   variants: {
     disabled: {
-      true: 'si-disabled'
+      true: 'disabled'
     },
     leadingIcon: {
-      true: 'si-icon--leading'
+      true: 'icon--leading'
     },
     selected: {
-      true: 'si-selected'
+      true: 'selected'
     },
     variant: {
-      primary: 'si-btn si-btn__primary si-btn__primary--link',
-      secondary: 'si-btn si-btn__secondary si-btn__secondary--link',
-      onlyIcon: 'si-btn si-btn__icon'
+      primary: 'btn btn__primary btn__primary--link',
+      secondary: 'btn btn__secondary btn__secondary--link',
+      onlyIcon: 'btn btn__icon'
     },
     size: {
-      sm: 'si-btn--sm',
-      md: 'si-btn--md',
-      lg: 'si-btn--lg'
+      sm: 'btn--sm',
+      md: 'btn--md',
+      lg: 'btn--lg'
     }
   },
 

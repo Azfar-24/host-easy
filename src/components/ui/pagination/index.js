@@ -3,12 +3,12 @@ import React from 'react';
 const Pagination = ({ currentActive, handleClick, data, isSelected }) => {
   return (
     <>
-      <div className='si-pagination__list'>
+      <div className='pagination__list'>
         <ul>
           {data?.map((item, index) => (
             <li
-              className={`${currentActive == item ? 'si-active' : ''} ${
-                isSelected[item] ? 'si-picked' : ''
+              className={`${currentActive == item ? 'active' : ''} ${
+                isSelected[item] ? 'picked' : ''
               }`}
               key={index}
               onClick={() => {

@@ -1,6 +1,6 @@
 @use '../config' as *;
 
-.si-tabs {
+.tabs {
   &__wrap {
     // background-color: var(--tab-bg);
     overflow: hidden;
@@ -13,7 +13,7 @@
       justify-content: flex-start;
       align-items: stretch;
       @extend %flexbox !optional;
-      @extend %si-borRad4 !optional;
+      @extend %borRad4 !optional;
       li {
         position: relative;
         min-height: 100%;
@@ -31,7 +31,7 @@
         align-items: center;
         gap: calc(var(--gutter-space) * 2);
         @extend %flexbox !optional;
-        @extend %si-regularFF-sec !optional;
+        @extend %regularFF-sec !optional;
         &:not(:last-child) {
           button,
           a {
@@ -47,14 +47,14 @@
               background: var(--tab-border);
               @include transform(translateY(-50%));
             }
-            &.si-active {
+            &.active {
               &::after {
                 display: none;
               }
             }
           }
         }
-        &.si-active {
+        &.active {
           pointer-events: none;
           color: var(--tab-active-text);
           &::after {
@@ -63,11 +63,11 @@
         }
         em {
           font-size: 1rem;
-          @extend %si-regularFF-sec !optional;
+          @extend %regularFF-sec !optional;
         }
 
         button {
-          @extend %si-buttonReset !optional;
+          @extend %buttonReset !optional;
         }
 
         button,
@@ -89,9 +89,9 @@
           align-items: center;
           gap: var(--gutter-space);
           @extend %flexbox !optional;
-          @extend %si-regularFF-sec !optional;
+          @extend %regularFF-sec !optional;
 
-          &.si-active {
+          &.active {
             background: var(--tab-active-bg);
             pointer-events: none;
             color: var(--tab-active-text);
@@ -115,15 +115,15 @@
     justify-content: center;
     align-items: center;
     @extend %flexbox !optional;
-    @extend %si-regularFF-sec !optional;
-    @extend %si-buttonReset !optional;
+    @extend %regularFF-sec !optional;
+    @extend %buttonReset !optional;
     em {
       @include setProperty(font-size, 16);
       display: block;
-      @extend %si-regularFF-sec !optional;
+      @extend %regularFF-sec !optional;
     }
 
-    &.si-active {
+    &.active {
       color: var(--tab-active);
       border-bottom-color: var(--tab-active);
     }

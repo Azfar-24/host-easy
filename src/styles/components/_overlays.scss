@@ -1,6 +1,6 @@
 @use '../config' as *;
 //animations transition
-.si-fade {
+.fade {
   &.in {
     z-index: 9999999;
     background: var(--overlay-fg);
@@ -8,8 +8,8 @@
     backdrop-filter: blur(2px);
     @include opacity(1);
     @include transition(opacity 0.1s linear, padding-top 0.1s linear);
-    .si-popup__container {
-      @include animation('si-popInUp .15s both');
+    .popup__container {
+      @include animation('popInUp .15s both');
     }
   }
 
@@ -17,14 +17,14 @@
     pointer-events: none;
     @include opacity(0);
     @include transition(opacity 0.1s linear, padding-top 0.1s linear);
-    .si-popup__container {
-      @include animation('si-popOutUp .15s both');
+    .popup__container {
+      @include animation('popOutUp .15s both');
     }
   }
 }
 
 //pop-ups
-.si-popup {
+.popup {
   &__wrap {
     // backdrop-filter: blur(4px);
     z-index: -9999;
@@ -47,7 +47,7 @@
       max-width: 100%;
     }
     &--player {
-      .si-popup {
+      .popup {
         &__container {
           max-width: var(--screen-tab);
         }
@@ -62,7 +62,7 @@
       }
     }
     &--share {
-      .si-popup {
+      .popup {
         &__body {
           gap: calc(var(--gutter-space) * 6);
           @extend %gridbox !optional;
@@ -108,8 +108,8 @@
     justify-content: center;
     align-items: center;
     @extend %flexbox !optional;
-    @extend %si-buttonReset !optional;
-    @extend %si-borRad100 !optional;
+    @extend %buttonReset !optional;
+    @extend %borRad100 !optional;
   }
 
   &__heading {
@@ -121,7 +121,7 @@
     justify-content: center;
     align-items: center;
     @extend %flexbox !optional;
-    @extend %si-regularFF-sec !optional;
+    @extend %regularFF-sec !optional;
     span {
       position: relative;
       display: block;
@@ -131,9 +131,9 @@
       width: 100%;
       color: var(--overlay-caption);
       @include setProperty(font-size, 14);
-      @extend %si-regularFF !optional;
+      @extend %regularFF !optional;
     }
-    + .si-popup__heading-sub {
+    + .popup__heading-sub {
       // margin-top: calc(var(--gutter-space) * 2);
     }
   }
@@ -142,7 +142,7 @@
     justify-content: center;
     align-items: center;
     @extend %flexbox !optional;
-    @extend %si-borRad100 !optional;
+    @extend %borRad100 !optional;
     @include setProperty(font-size, 40);
     @include setProperty(width, 56);
     @include setProperty(height, 56);
@@ -199,7 +199,7 @@
     align-items: center;
     gap: calc(var(--gutter-space) * 4);
     @extend %flexbox !optional;
-    .si-btn {
+    .btn {
       flex-basis: calc(100% / 2);
       flex-grow: 1;
       // text-transform: uppercase;

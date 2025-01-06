@@ -22,12 +22,12 @@ const InputField = ({
     <>
       <div
         ref={parentDiv}
-        className={`si-input ${parentExtraCls ? parentExtraCls : ''} ${
-          inputValidate ? 'si-invalid' : ''
+        className={`input ${parentExtraCls ? parentExtraCls : ''} ${
+          inputValidate ? 'invalid' : ''
         }`}
       >
         {hiddenlabel ?? <InputLabel {...labelConfig} />}
-        <div className='si-input__field'>
+        <div className='input__field'>
           <input
             autoComplete='off'
             type={type}

@@ -6,21 +6,21 @@ import Media from '../media';
 const avatarConfig = cva('', {
   variants: {
     aspectRatio: {
-      ratio_1_1: 'si-ratio__1_1',
-      ratio_16_9: 'si-ratio__16_9',
-      ratio_9_16: 'si-ratio__9_16',
-      ratio_3_2: 'si-ratio__3_2',
-      ratio_2_3: 'si-ratio__2_3',
-      ratio_3_4: 'si-ratio__3_4',
-      ratio_4_3: 'si-ratio__4_3',
-      ratio_4_6: 'si-ratio__4_6',
-      ratio_6_4: 'si-ratio__6_4',
-      ratio_21_9: 'si-ratio__21_9'
+      ratio_1_1: 'ratio__1_1',
+      ratio_16_9: 'ratio__16_9',
+      ratio_9_16: 'ratio__9_16',
+      ratio_3_2: 'ratio__3_2',
+      ratio_2_3: 'ratio__2_3',
+      ratio_3_4: 'ratio__3_4',
+      ratio_4_3: 'ratio__4_3',
+      ratio_4_6: 'ratio__4_6',
+      ratio_6_4: 'ratio__6_4',
+      ratio_21_9: 'ratio__21_9'
     },
     size: {
-      sm: 'si-sm',
-      md: 'si-md',
-      lg: 'si-lg'
+      sm: 'sm',
+      md: 'md',
+      lg: 'lg'
     }
   }
 });

@@ -26,9 +26,9 @@ const CountDown = ({ utcTime, customCls, showSeconds, setDeadlineOver, matchNo, 
 
   return (
     <>
-      <div className={`si-stopWatch__wrap ${customCls || ''}`}>
+      <div className={`stopWatch__wrap ${customCls || ''}`}>
         {showDay ? (
-          <div className='si-stopWatch__box'>
+          <div className='stopWatch__box'>
             <Typo component={'span'} transKey={'countdown_day'}>
               {countdown.days < 10 ? `0${countdown.days}` : countdown.days}
             </Typo>
@@ -49,7 +49,7 @@ const CountDown = ({ utcTime, customCls, showSeconds, setDeadlineOver, matchNo, 
             )}
           </div>
         ) : null}
-        <div className='si-stopWatch__box'>
+        <div className='stopWatch__box'>
           <Typo component={'span'} transKey={'countdown_hour'}>
             {countdown.hours < 10 ? `0${countdown.hours}` : countdown.hours}
           </Typo>
@@ -69,7 +69,7 @@ const CountDown = ({ utcTime, customCls, showSeconds, setDeadlineOver, matchNo, 
             </Typo>
           )}
         </div>
-        <div className='si-stopWatch__box'>
+        <div className='stopWatch__box'>
           <Typo component={'span'} transKey={'countdown_minute'}>
             {countdown.minutes < 10 ? `0${countdown.minutes}` : countdown.minutes}
           </Typo>
@@ -90,7 +90,7 @@ const CountDown = ({ utcTime, customCls, showSeconds, setDeadlineOver, matchNo, 
           )}
         </div>
         {showSec ? (
-          <div className='si-stopWatch__box'>
+          <div className='stopWatch__box'>
             <Typo component={'span'} transKey={'countdown_seconds'}>
               {countdown.seconds < 10 ? `0${countdown.seconds}` : countdown.seconds}
             </Typo>

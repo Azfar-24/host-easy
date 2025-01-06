@@ -7,27 +7,27 @@ import { TRACKING_ELEMENT_ID } from 'utils/constants';
 const button = cva('', {
   variants: {
     disabled: {
-      true: 'si-disabled'
+      true: 'disabled'
     },
     leadingIcon: {
-      true: 'si-icon--leading'
+      true: 'icon--leading'
     },
     selected: {
-      true: 'si-selected'
+      true: 'selected'
     },
     variant: {
-      primary: 'si-btn si-btn__primary',
-      secondary: 'si-btn si-btn__secondary',
-      primaryOutline: 'si-btn si-btn__primary si-btn__primary--outline',
-      secondaryOutline: 'si-btn si-btn__secondary si-btn__secondary--outline',
-      primaryLink: 'si-btn si-btn__primary si-btn__primary--link',
-      secondaryLink: 'si-btn si-btn__secondary si-btn__secondary--link',
-      onlyIcon: 'si-btn si-btn__icon'
+      primary: 'btn btn__primary',
+      secondary: 'btn btn__secondary',
+      primaryOutline: 'btn btn__primary btn__primary--outline',
+      secondaryOutline: 'btn btn__secondary btn__secondary--outline',
+      primaryLink: 'btn btn__primary btn__primary--link',
+      secondaryLink: 'btn btn__secondary btn__secondary--link',
+      onlyIcon: 'btn btn__icon'
     },
     size: {
-      sm: 'si-btn--sm',
-      md: 'si-btn--md',
-      lg: 'si-btn--lg'
+      sm: 'btn--sm',
+      md: 'btn--md',
+      lg: 'btn--lg'
     }
   },
 
@@ -51,7 +51,7 @@ const Button = ({
   allVotesSelected,
   ...restProps
 }) => {
-  isContinue && !allVotesSelected ? disabled = true : disabled = disabled;
+  isContinue && !allVotesSelected ? (disabled = true) : (disabled = disabled);
   return (
     <button
       id={TRACKING_ELEMENT_ID}

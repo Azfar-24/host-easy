@@ -1,6 +1,6 @@
 @use '../config' as *;
 //Checkbox button
-.si-checkBox {
+.checkBox {
   word-break: break-all;
   position: relative;
   align-items: center;
@@ -10,7 +10,7 @@
 
   [type='checkbox'] {
     &:disabled + label {
-      @extend .si-disabled !optional;
+      @extend .disabled !optional;
     }
     &:checked,
     &:not(:checked) {
@@ -29,7 +29,7 @@
         line-height: 1;
         display: block;
         color: var(--checkbox-label);
-        @extend %si-boldFF !optional;
+        @extend %boldFF !optional;
 
         &::after,
         &::before {
@@ -49,7 +49,7 @@
           @include transition(all 0.2s ease);
           @include setProperty(width, 24);
           @include setProperty(height, 24);
-          @extend %si-borRad6 !optional;
+          @extend %borRad6 !optional;
         }
 
         &::before {
@@ -69,7 +69,7 @@
           border-bottom: var(--border-1) solid var(--primary-1);
           margin-left: calc(var(--gutter-space) * 2);
           color: var(--primary-1);
-          @extend %si-mediumFF !optional;
+          @extend %mediumFF !optional;
           @include setProperty(font-size, 12);
         }
       }

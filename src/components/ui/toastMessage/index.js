@@ -27,7 +27,7 @@ const ToastMessage = ({
     switch (type) {
       case 1:
         return {
-          clsName: 'si-success',
+          clsName: 'success',
           lbl: (
             <>
               <i className='sii-tick'></i>
@@ -37,7 +37,7 @@ const ToastMessage = ({
 
       case 2:
         return {
-          clsName: 'si-danger',
+          clsName: 'danger',
           lbl: (
             <>
               <i className='sii-close'></i>
@@ -47,7 +47,7 @@ const ToastMessage = ({
 
       case 3:
         return {
-          clsName: 'si-warning'
+          clsName: 'warning'
         };
 
       default:
@@ -60,20 +60,20 @@ const ToastMessage = ({
   return (
     <>
       {open && type ? (
-        <div className={`si-notification in  ${getNotificationStatus(type).clsName}`}>
+        <div className={`notification in  ${getNotificationStatus(type).clsName}`}>
           {getNotificationStatus(type).lbl && (
-            <div className='si-notification__icon'>
+            <div className='notification__icon'>
               {getNotificationStatus(type).lbl}
               {icon && <i className={icon}></i>}
             </div>
           )}
 
-          <Typo transKey={transMessage} component='div' className='si-notification__content'>
+          <Typo transKey={transMessage} component='div' className='notification__content'>
             {message}
           </Typo>
 
           {handleClose && (
-            <div className='si-notification__cta'>
+            <div className='notification__cta'>
               <Button
                 variant={'onlyIcon'}
                 onClick={() => handleClose()}

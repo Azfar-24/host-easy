@@ -5,7 +5,7 @@ const InputLabel = ({ inputID, hiddenLabel, inputLbl, transInputLbl }) => {
   return (
     <>
       {!hiddenLabel ? (
-        <Typo transKey={transInputLbl} component='label' className='si-lbl' htmlFor={inputID}>
+        <Typo transKey={transInputLbl} component='label' className='lbl' htmlFor={inputID}>
           {inputLbl}
         </Typo>
       ) : (

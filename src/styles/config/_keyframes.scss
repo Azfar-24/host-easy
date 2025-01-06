@@ -1,6 +1,6 @@
 @use "../config/mixins" as *;
 //popInUp
-@include keyframes(si-popInUp) {
+@include keyframes(popInUp) {
   0% {
     @include opacity(0);
     @include transform(translate(0%, 100%));
@@ -14,7 +14,7 @@
 }
 
 //popOutUp
-@include keyframes(si-popOutUp) {
+@include keyframes(popOutUp) {
   0% {
     @include opacity(1);
     @include transform(translate(0%, 0%));
@@ -27,7 +27,7 @@
 }
 
 //fade
-@include keyframes(si-opacity) {
+@include keyframes(opacity) {
   0% {
     @include opacity(0.2);
   }
@@ -38,7 +38,7 @@
 }
 
 //Rotate
-@include keyframes(si-rotate) {
+@include keyframes(rotate) {
   0% {
     @include transform(rotateY(0deg));
   }
@@ -49,7 +49,7 @@
 }
 
 //Rotate Spin
-@include keyframes(si-spin) {
+@include keyframes(spin) {
   0% {
     @include transform(rotate(0deg));
   }
@@ -60,7 +60,7 @@
 }
 
 //toast
-@include keyframes(si-toast) {
+@include keyframes(toast) {
   0% {
     @include transform(translateY(-100%));
   }
@@ -70,8 +70,8 @@
   }
 }
 
-// si-zoomIn
-@include keyframes(si-zoomIn) {
+// zoomIn
+@include keyframes(zoomIn) {
   from {
     @include opacity(0);
     @include transform(scale3d(0.3, 0.3, 0.3));
@@ -83,7 +83,7 @@
 }
 
 // pulse
-@include keyframes(si-pulse) {
+@include keyframes(pulse) {
   0% {
     @include transform(scaleX(1));
   }
@@ -119,8 +119,8 @@
   }
 }
 
-//si-dropdownAnimi
-@include keyframes(si-dropdownAnimi) {
+//dropdownAnimi
+@include keyframes(dropdownAnimi) {
   0% {
     @include transform(translateY(100%));
   }
@@ -130,7 +130,7 @@
   }
 }
 
-@include keyframes(si-slideInLeft) {
+@include keyframes(slideInLeft) {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
@@ -142,7 +142,7 @@
     transform: translateZ(0);
   }
 }
-@include keyframes(si-slideOutLeft) {
+@include keyframes(slideOutLeft) {
   0% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);

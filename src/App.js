@@ -9,11 +9,9 @@ const App = () => {
   // const { isSuccess } = useConfigQuery();
 
   return (
-    <div className='si-main'>
-      <Suspense fallback={<Loader />}>
-        <RouterProvider router={router} />
-      </Suspense>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 };
 

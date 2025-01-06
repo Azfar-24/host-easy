@@ -1,68 +1,68 @@
 @use '../config/mixins' as *;
 
-.si-ratio__1_1,
-.si-ratio__16_9,
-.si-ratio__9_16,
-.si-ratio__3_2,
-.si-ratio__2_3,
-.si-ratio__3_4,
-.si-ratio__4_3,
-.si-ratio__4_6,
-.si-ratio__6_4,
-.si-ratio__21_9 {
+.ratio__1_1,
+.ratio__16_9,
+.ratio__9_16,
+.ratio__3_2,
+.ratio__2_3,
+.ratio__3_4,
+.ratio__4_3,
+.ratio__4_6,
+.ratio__6_4,
+.ratio__21_9 {
   img {
     object-fit: contain;
     object-position: center;
   }
 }
 
-.si-ratio__1_1 {
+.ratio__1_1 {
   aspect-ratio: 1/1;
   img {
     aspect-ratio: 1/1;
   }
 }
-.si-ratio__16_9 {
+.ratio__16_9 {
   img {
     aspect-ratio: 16/9;
   }
 }
-.si-ratio__9_16 {
+.ratio__9_16 {
   img {
     aspect-ratio: 9_/6;
   }
 }
-.si-ratio__3_2 {
+.ratio__3_2 {
   img {
     aspect-ratio: 3/2;
   }
 }
-.si-ratio__2_3 {
+.ratio__2_3 {
   img {
     aspect-ratio: 2/3;
   }
 }
-.si-ratio__3_4 {
+.ratio__3_4 {
   img {
     aspect-ratio: 3/4;
   }
 }
-.si-ratio__4_3 {
+.ratio__4_3 {
   img {
     aspect-ratio: 4/3;
   }
 }
-.si-ratio__4_6 {
+.ratio__4_6 {
   img {
     aspect-ratio: 4/6;
   }
 }
-.si-ratio__6_4 {
+.ratio__6_4 {
   img {
     aspect-ratio: 6/4;
   }
 }
-.si-ratio__21_9 {
+.ratio__21_9 {
   img {
     aspect-ratio: 21/9;
   }

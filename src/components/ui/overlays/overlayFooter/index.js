@@ -34,7 +34,7 @@ const OverlayFooter = ({
   }, []);
   return (
     <>
-      <div className='si-popup__foot'>
+      <div className='popup__foot'>
         {cancelBtn && (
           <Button
             variant={'primaryOutline'}

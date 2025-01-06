@@ -13,7 +13,7 @@ const { execSync } = require('child_process');
     process.exit(1);
   }
 
-  const bucketName = `si-${env}-assets/static-assets/`;
+  const bucketName = `${env}-assets/static-assets/`;
   const profile = 'default';
 
   const command = `aws s3 cp ./dist s3://${bucketName} --profile ${profile} --recursive`;

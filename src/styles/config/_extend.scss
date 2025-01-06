@@ -4,57 +4,57 @@
   background: $tagThemeBg;
   color: $tagThemeColor;
 }
-%si-buttonReset {
+%buttonReset {
   cursor: pointer;
   background-color: transparent;
   box-shadow: none;
   border: none;
 }
-%si-borRad100 {
+%borRad100 {
   @include border-radius(setUnit(100));
 }
-%si-borRad48 {
+%borRad48 {
   @include border-radius(setUnit(48));
 }
-%si-borRad30 {
+%borRad30 {
   @include border-radius(setUnit(30));
 }
-%si-borRad24 {
+%borRad24 {
   @include border-radius(setUnit(24));
 }
-%si-borRad16 {
+%borRad16 {
   @include border-radius(setUnit(16));
 }
-%si-borRad14 {
+%borRad14 {
   @include border-radius(setUnit(14));
 }
-%si-borRad12 {
+%borRad12 {
   @include border-radius(setUnit(12));
 }
-%si-borRad10 {
+%borRad10 {
   @include border-radius(setUnit(10));
 }
-%si-borRad8 {
+%borRad8 {
   @include border-radius(setUnit(8));
 }
-%si-borRad6 {
+%borRad6 {
   @include border-radius(setUnit(6));
 }
-%si-borRad4 {
+%borRad4 {
   @include border-radius(setUnit(4));
 }
-%si-borRad2 {
+%borRad2 {
   @include border-radius(setUnit(2));
 }
-%si-borRad0 {
+%borRad0 {
   @include border-radius(setUnit(0));
 }
 
 //background size
-%si-bgSize--cover {
+%bgSize--cover {
   @include background-size(cover);
 }
 
-%si-bgSize--contain {
+%bgSize--contain {
   @include background-size(contain);
 }

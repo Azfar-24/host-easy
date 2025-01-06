@@ -4,9 +4,9 @@ import InputField from '../inputField';
 const InputAdornments = ({ inputConfig, slug }) => {
   return (
     <>
-      <div className='si-inputAdornments'>
+      <div className='inputAdornments'>
         <InputField hiddenlabel {...inputConfig} />
-        <div className='si-inputAdornments__slug'>{slug}</div>
+        <div className='inputAdornments__slug'>{slug}</div>
       </div>
     </>
   );

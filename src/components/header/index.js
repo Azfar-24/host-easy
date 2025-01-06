@@ -8,14 +8,14 @@ const Header = () => {
 
   return (
     <header>
-      <div className='si-header__left'>
-        <Typo component={'h5'} className='si-header__productTitle'>
-         Host Easy
+      <div className='header__left'>
+        <Typo component={'h5'} className='header__productTitle'>
+          Host Easy
         </Typo>
       </div>
       <Navbar />
-      <div className='si-header__right'>
-        <div className='si-user-profile'>
+      <div className='header__right'>
+        <div className='user-profile'>
           {/* <img src={require(assets/images/default-profile.png)} alt='' /> */}
         </div>
       </div>

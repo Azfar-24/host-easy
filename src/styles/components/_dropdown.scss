@@ -1,14 +1,14 @@
 @use '../config' as *;
 
-.si-dropdown {
-  &.si-up {
-    .si-dropdown__list {
+.dropdown {
+  &.up {
+    .dropdown__list {
       top: auto;
       bottom: calc(100% + 2px);
     }
   }
-  &.si-fullScreenMenu {
-    .si-dropdown__list {
+  &.fullScreenMenu {
+    .dropdown__list {
       position: fixed;
       top: 0;
       left: 0;
@@ -23,7 +23,7 @@
 
     margin-bottom: var(--gutter-space);
     color: var(--white);
-    @extend %si-regularFF !optional;
+    @extend %regularFF !optional;
     @include setProperty(font-size, 12);
   }
   &__box {
@@ -34,9 +34,9 @@
     color: var(--primary-3);
     background: var(--neutral-2);
     border: var(--border-1) solid var(--neutral-1);
-    @extend %si-borRad100 !optional;
+    @extend %borRad100 !optional;
 
-    &.si-active {
+    &.active {
     }
   }
   &__value {
@@ -51,9 +51,9 @@
     justify-content: flex-start;
     align-items: center;
     @extend %flexbox !optional;
-    @extend %si-mediumFF !optional;
-    @extend %si-borRad8 !optional;
-    .si-value__icon {
+    @extend %mediumFF !optional;
+    @extend %borRad8 !optional;
+    .value__icon {
       margin-left: auto;
       color: var(--primary-1);
       @include setProperty(font-size, 16);
@@ -74,7 +74,7 @@
     @include setProperty(max-height, 140);
     overflow-y: auto;
     @include box-shadow(0px, 4px, 16px, 0px, rgba(0, 0, 0, 0.16));
-    @extend %si-borRad8 !optional;
+    @extend %borRad8 !optional;
     ul {
       margin: calc(var(--gutter-space) * 2);
       li {
@@ -82,14 +82,14 @@
         color: var(--primary-3);
         padding: calc(var(--gutter-space) * 4);
         text-align: left;
-        @extend %si-mediumFF !optional;
+        @extend %mediumFF !optional;
         &:not(:last-child) {
           border-bottom: var(--border-1) solid var(--neutral-7);
         }
-        &.si-active {
+        &.active {
           // position: relative;
           background: var(--secondary-3);
-          @extend %si-borRad4 !optional;
+          @extend %borRad4 !optional;
           // &::after {
           //   content: "\e90e";
           //   font-family: "fgi" !important;
@@ -100,14 +100,14 @@
           // }
           // color: var(--white);
           // background-color: var(--primary-3);
-          // @extend %si-boldFF !optional;
+          // @extend %boldFF !optional;
         }
       }
     }
   }
 }
 
-.si-dropdownValue {
+.dropdownValue {
   justify-content: flex-start;
   align-items: center;
   @extend %flexbox !optional;
@@ -118,14 +118,14 @@
     margin-right: 1rem;
   }
   &-text {
-    @extend %si-regularFF !optional;
+    @extend %regularFF !optional;
   }
 }
 
-.si-select {
+.select {
   &__native {
-    &.si-disabled {
-      .si-select__field {
+    &.disabled {
+      .select__field {
         --input-bg: hsla(220, 33%, 96%, 1);
         --input-text: hsla(60, 1%, 66%, 1);
         --input-outline: hsla(0, 0%, 72%, 1);
@@ -135,7 +135,7 @@
         pointer-events: none;
       }
     }
-    .si-select__field {
+    .select__field {
       position: relative;
       align-items: center;
       @extend %flexbox !optional;

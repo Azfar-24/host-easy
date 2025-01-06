@@ -1,9 +1,9 @@
 @use '../config' as *;
-.si-miniCountDown {
+.miniCountDown {
   all: unset;
   gap: var(--gutter-space);
   @extend %flexbox !optional;
-  .si-stopWatch__box {
+  .stopWatch__box {
     all: unset;
     &::after {
       display: none;
@@ -15,11 +15,11 @@
   }
 }
 
-.si-stopWatch {
+.stopWatch {
   padding: calc(var(--gutter-space) * 4);
   background: hsla(0, 0%, 0%, 0.68);
   @include setProperty(max-width, 200);
-  @extend %si-borRad8 !optional;
+  @extend %borRad8 !optional;
   &-caption {
     text-align: center;
     color: var(--neutral-2);
@@ -31,7 +31,7 @@
     justify-content: space-evenly;
     align-items: flex-start;
     @extend %flexbox !optional;
-    @extend %si-borRad8 !optional;
+    @extend %borRad8 !optional;
     &--normal {
       gap: calc(var(--gutter-space) * 2);
       border: none;
@@ -39,7 +39,7 @@
       color: var(--neutral-2);
       background: transparent;
       @include setProperty(font-size, 10);
-      .si-stopWatch {
+      .stopWatch {
         &__box {
           --stopwatch-lbl: hsla(0, 0%, 100%, 1);
           gap: calc(var(--gutter-space) * 2);
@@ -52,7 +52,7 @@
           em,
           span {
             @include setProperty(font-size, 10);
-            @extend %si-mediumFF !optional;
+            @extend %mediumFF !optional;
             // @media screen and (min-width: $media-tablets-min) {
             //   font-size: 1.4rem;
             // }
@@ -83,7 +83,7 @@
       //   left: auto;
       //   right: 0;
       //   @include transform(translateY(-50%));
-      //   @extend %si-boldFF !optional;
+      //   @extend %boldFF !optional;
       // }
     }
     span {
@@ -95,7 +95,7 @@
       @include setProperty(font-size, 16);
       @include setProperty(height, 20);
       @extend %flexbox !optional;
-      @extend %si-boldFF !optional;
+      @extend %boldFF !optional;
     }
     em {
       @include setProperty(font-size, 8);

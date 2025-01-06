@@ -8,7 +8,7 @@ const BackButton = ({ onClick, onlyIcon }) => {
     navigate(-1);
   };
   return (
-    <div className='si-backBtn'>
+    <div className='backBtn'>
       <Button
         variant={`${onlyIcon ? 'onlyIcon' : 'primaryLink'}`}
         onClick={onClick}

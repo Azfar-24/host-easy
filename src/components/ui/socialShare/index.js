@@ -5,16 +5,16 @@ import Anchor from '../anchor';
 const SocialShare = ({ title, titleTransKey, data }) => {
   return (
     <>
-      <div className='si-socialShare'>
-        <Typo transKey={titleTransKey} component='h3' className='si-socialShare__title'>
+      <div className='socialShare'>
+        <Typo transKey={titleTransKey} component='h3' className='socialShare__title'>
           {title}
         </Typo>
-        <div className='si-socialShare__icons'>
+        <div className='socialShare__icons'>
           {data.map((item, index) => (
             <Anchor
               key={index}
               hyperLink={item.link}
-              classes={`si-social__icon ${item.iconName}`}
+              classes={`social__icon ${item.iconName}`}
               iconCls={item.iconCls}
               variant={'onlyIcon'}
             ></Anchor>

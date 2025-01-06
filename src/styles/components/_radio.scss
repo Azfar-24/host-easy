@@ -1,7 +1,7 @@
 @use '../config' as *;
 
 // radio button
-.si-radioBtn {
+.radioBtn {
   word-break: break-all;
   position: relative;
   justify-content: space-between;
@@ -44,7 +44,7 @@
 
   [type='radio'] {
     &:disabled + label {
-      @extend .si-disabled !optional;
+      @extend .disabled !optional;
     }
 
     &:checked,
@@ -70,14 +70,14 @@
         justify-content: flex-start;
         align-items: center;
         @extend %flexbox !optional;
-        @extend %si-borRad8 !optional;
-        @extend %si-boldFF !optional;
+        @extend %borRad8 !optional;
+        @extend %boldFF !optional;
 
         &::after,
         &::before {
           color: var(--radio-checked);
           aspect-ratio: 1/1;
-          font-family: 'si-icon' !important;
+          font-family: 'icon' !important;
           position: absolute;
           left: auto;
           right: calc(var(--gutter-space) * 4);
@@ -105,7 +105,7 @@
           border-bottom: var(--border-1) solid var(--primary-1);
           margin-left: calc(var(--gutter-space) * 2);
           @include setProperty(font-size, 12);
-          @extend %si-mediumFF !optional;
+          @extend %mediumFF !optional;
         }
       }
     }
@@ -114,7 +114,7 @@
       & + label {
         border: var(--border-1) solid var(--background-2);
         color: var(--secondary-1);
-        @extend %si-borRad8 !optional;
+        @extend %borRad8 !optional;
         &::after {
           color: var(--radio-checked);
         }

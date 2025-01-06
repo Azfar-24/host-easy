@@ -13,7 +13,7 @@ const Radio = ({
 }) => {
   return (
     <>
-      <div className={`si-radioBtn ${extraCls ? extraCls : ''}`} key={key}>
+      <div className={`radioBtn ${extraCls ? extraCls : ''}`} key={key}>
         <input
           type='radio'
           id={radioID}
@@ -24,7 +24,7 @@ const Radio = ({
           checked={checked}
         />
         <label htmlFor={radioID}>
-          {label && <div className='si-radioBtn__lbl'> {label}</div>}
+          {label && <div className='radioBtn__lbl'> {label}</div>}
           {component}
         </label>
       </div>

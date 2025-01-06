@@ -14,7 +14,7 @@ const InputCheckbox = ({
 
   return (
     <>
-      <div className={`si-checkBox ${extraCls ? extraCls : ''}`}>
+      <div className={`checkBox ${extraCls ? extraCls : ''}`}>
         <input
           type='checkbox'
           id={checkboxID}
@@ -27,7 +27,7 @@ const InputCheckbox = ({
         />
 
         <label htmlFor={checkboxID}>
-          {label && <div className='si-checkBox__lbl'> {label}</div>}
+          {label && <div className='checkBox__lbl'> {label}</div>}
           {components}
         </label>
       </div>

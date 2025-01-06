@@ -5,7 +5,7 @@ import React from 'react';
 const OverlayHeroBanner = ({ imgProps }) => {
   return (
     <>
-      <div className='si-popup__heroBanner'>
+      <div className='popup__heroBanner'>
         <Media {...imgProps} />
       </div>
     </>

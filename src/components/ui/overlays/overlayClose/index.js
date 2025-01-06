@@ -21,7 +21,7 @@ const OverlayClose = ({
   const escFunction = useCallback((event) => {}, []);
   return (
     <>
-      <button className='si-popup__close' onClick={() => onClickProp()}>
+      <button className='popup__close' onClick={() => onClickProp()}>
         <i className='sii-close'></i>
       </button>
     </>

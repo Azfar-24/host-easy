@@ -6,7 +6,7 @@ var figlet = require('figlet');
 
 const BUILD_PATH = '/dist';
 const JS_PATH = '/js';
-const jsURL = BUILD_PATH + JS_PATH + '/si-main-chunk.js';
+const jsURL = BUILD_PATH + JS_PATH + '/main-chunk.js';
 const rootDir = process.cwd();
 
 const ensureDirectoryExistence = (filePath) => {
@@ -57,6 +57,6 @@ fs.readFile(rootDir + BUILD_PATH + '/index.html', 'utf8', (err, html) => {
       }
       console.log(data);
     });
-    console.log('\x1b[32msi-main-chunk file created successfully.\x1b[0m');
+    console.log('\x1b[32mmain-chunk file created successfully.\x1b[0m');
   });
 });

@@ -18,17 +18,13 @@ function Overlays({ overlayName, overlayConfig, children }) {
 
   return (
     <>
-      <div
-        className={`si-popup__wrap ${
-          overlayName ? `si-popup__wrap--${overlayName}` : ''
-        } si-fade in`}
-      >
+      <div className={`popup__wrap ${overlayName ? `popup__wrap--${overlayName}` : ''} fade in`}>
         {/* in | out */}
-        <div className='si-popup__container'>
+        <div className='popup__container'>
           {noOverlayClose && <OverlayClose onClickProp={onClickProp} />}
           {noOverlayHeroBanner && <OverlayHeroBanner {...overlayConfig} />}
           {noOverlayHead && <OverlayHeader {...overlayConfig} />}
-          {noOverlayBody && <div className='si-popup__body'>{children}</div>}
+          {noOverlayBody && <div className='popup__body'>{children}</div>}
           {noOverlayFoot && <OverlayFooter {...overlayConfig} />}
         </div>
       </div>

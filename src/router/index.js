@@ -28,7 +28,7 @@ const route = [
   {
     path: '/',
     element: (
-      <div className='si-main'>
+      <div className='main'>
         <Header />
         <AppLayout />
       </div>

@@ -7,7 +7,7 @@ const ValidationText = ({ customCls, errMsg, transErrMsg }) => {
       <Typo
         transKey={transErrMsg}
         component={'div'}
-        className={`si-errMsg ${customCls ? customCls : ''}`}
+        className={`errMsg ${customCls ? customCls : ''}`}
       >
         {errMsg}
       </Typo>

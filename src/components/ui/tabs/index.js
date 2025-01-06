@@ -15,11 +15,11 @@ const Tabs = ({
 }) => {
   let foo = `#`;
   const activeClass = (name) => {
-    return name === active ? 'si-active' : '';
+    return name === active ? 'active' : '';
   };
   return (
     <>
-      <div className={`si-tabs__wrap ${customCls ? customCls : ''}`}>
+      <div className={`tabs__wrap ${customCls ? customCls : ''}`}>
         {type === 'text' ? (
           <ul>
             {data?.map((name, index) => (
@@ -28,10 +28,10 @@ const Tabs = ({
                   classes={`${activeClass(name)} ${
                     !Array.isArray(disabledData)
                       ? disabledData === name
-                        ? 'si-disabled'
+                        ? 'disabled'
                         : ''
                       : disabledData.includes(name)
-                      ? 'si-disabled'
+                      ? 'disabled'
                       : ''
                   }`}
                   disabled={
