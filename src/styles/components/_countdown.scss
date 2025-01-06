@@ -1,0 +1,107 @@
+@use '../config' as *;
+.si-miniCountDown {
+  all: unset;
+  gap: var(--gutter-space);
+  @extend %flexbox !optional;
+  .si-stopWatch__box {
+    all: unset;
+    &::after {
+      display: none;
+    }
+    em,
+    span {
+      all: unset;
+    }
+  }
+}
+
+.si-stopWatch {
+  padding: calc(var(--gutter-space) * 4);
+  background: hsla(0, 0%, 0%, 0.68);
+  @include setProperty(max-width, 200);
+  @extend %si-borRad8 !optional;
+  &-caption {
+    text-align: center;
+    color: var(--neutral-2);
+    @include setProperty(font-size, 10);
+  }
+  &__wrap {
+    @include setProperty(gap, 2);
+    padding-top: calc(var(--gutter-space) * 2);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+    @extend %si-borRad8 !optional;
+    &--normal {
+      gap: calc(var(--gutter-space) * 2);
+      border: none;
+      padding: 0;
+      color: var(--neutral-2);
+      background: transparent;
+      @include setProperty(font-size, 10);
+      .si-stopWatch {
+        &__box {
+          --stopwatch-lbl: hsla(0, 0%, 100%, 1);
+          gap: calc(var(--gutter-space) * 2);
+          justify-content: flex-start;
+          align-items: center;
+          @extend %flexbox !optional;
+          em {
+            --stopwatch-slug: hsla(0, 0%, 100%, 1);
+          }
+          em,
+          span {
+            @include setProperty(font-size, 10);
+            @extend %si-mediumFF !optional;
+            // @media screen and (min-width: $media-tablets-min) {
+            //   font-size: 1.4rem;
+            // }
+          }
+          &:not(:last-child) {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__box {
+    flex-grow: 1;
+    position: relative;
+    text-align: center;
+    @extend %gridbox !optional;
+    gap: calc(var(--gutter-space) * 4);
+    &:not(:last-child) {
+      // padding-right: calc(var(--gutter-space) * 4);
+      // &::after {
+      //   content: ':';
+      //   @include setProperty(font-size, 20);
+      //   color: var(--stopwatch-lbl);
+      //   position: absolute;
+      //   top: 50%;
+      //   left: auto;
+      //   right: 0;
+      //   @include transform(translateY(-50%));
+      //   @extend %si-boldFF !optional;
+      // }
+    }
+    span {
+      line-height: normal;
+      color: var(--stopwatch-lbl);
+      background: var(--stopwatch-bg);
+      justify-content: center;
+      align-items: center;
+      @include setProperty(font-size, 16);
+      @include setProperty(height, 20);
+      @extend %flexbox !optional;
+      @extend %si-boldFF !optional;
+    }
+    em {
+      @include setProperty(font-size, 8);
+      color: var(--stopwatch-slug);
+      text-transform: uppercase;
+      font-style: normal;
+    }
+  }
+}

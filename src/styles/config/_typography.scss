@@ -1,0 +1,217 @@
+@use '../config/mixins' as *;
+
+// Font Family
+%si-lightFF {
+  font-family: var(--light-ff);
+}
+%si-regularFF {
+  font-family: var(--regular-ff);
+}
+%si-mediumFF {
+  font-family: var(--medium-ff);
+}
+%si-boldFF {
+  font-family: var(--bold-ff);
+}
+%si-blackBoldFF {
+  font-family: var(--black-ff);
+}
+%si-regularFF-sec {
+  font-family: var(--regular-ff-sec);
+}
+
+// Typography
+%si-title-h1 {
+  @include setProperty(font-size, 40);
+  @include setProperty(line-height, 52);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 48);
+    @include setProperty(line-height, 62);
+  }
+}
+%si-title-h2 {
+  @include setProperty(font-size, 32);
+  @include setProperty(line-height, 44);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 40);
+    @include setProperty(line-height, 52);
+  }
+}
+%si-title-h3 {
+  @include setProperty(font-size, 24);
+  @include setProperty(line-height, 34);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 32);
+    @include setProperty(line-height, 42);
+  }
+}
+%si-title-h4 {
+  @include setProperty(font-size, 20);
+  @include setProperty(line-height, 28);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 36);
+    @include setProperty(line-height, 52);
+  }
+}
+%si-title-h5 {
+  @include setProperty(font-size, 18);
+  @include setProperty(line-height, 24);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 24);
+    @include setProperty(line-height, 36);
+  }
+}
+%si-title-h6 {
+  @include setProperty(font-size, 16);
+  @include setProperty(line-height, 22);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 20);
+    @include setProperty(line-height, 26);
+  }
+}
+%si-subtitle-light {
+  @include setProperty(font-size, 16);
+  @extend %si-lightFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 18);
+  }
+}
+%si-subtitle-regular {
+  @include setProperty(font-size, 16);
+  @extend %si-regularFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 18);
+  }
+}
+%si-subtitle-medium {
+  @include setProperty(font-size, 16);
+  @extend %si-mediumFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 18);
+  }
+}
+%si-subtitle-bold {
+  @include setProperty(font-size, 16);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 18);
+  }
+}
+%si-subtitle-blackBold {
+  @include setProperty(font-size, 16);
+  @extend %si-blackBoldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 18);
+  }
+}
+%si-body-1-light {
+  @include setProperty(font-size, 14);
+  @extend %si-lightFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 16);
+  }
+}
+%si-body-1-regular {
+  @include setProperty(font-size, 14);
+  @extend %si-regularFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 16);
+  }
+}
+%si-body-1-medium {
+  @include setProperty(font-size, 14);
+  @extend %si-mediumFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 16);
+  }
+}
+%si-body-1-bold {
+  @include setProperty(font-size, 14);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 16);
+  }
+}
+%si-body-1-blackBold {
+  @include setProperty(font-size, 14);
+  @extend %si-blackBoldFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 16);
+  }
+}
+%si-body-2-light {
+  @include setProperty(font-size, 12);
+  @extend %si-lightFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 14);
+  }
+}
+%si-body-2-regular {
+  @include setProperty(font-size, 12);
+  @extend %si-regularFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 14);
+  }
+}
+%si-body-2-medium {
+  @include setProperty(font-size, 12);
+  @extend %si-mediumFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 14);
+  }
+}
+%si-body-2-bold {
+  @include setProperty(font-size, 12);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 14);
+  }
+}
+%si-body-2-blackBold {
+  @include setProperty(font-size, 12);
+  @extend %si-blackBoldFF !optional;
+  @media screen and (min-width: $media-tablets-min) {
+    @include setProperty(font-size, 14);
+  }
+}
+%si-body-3-light {
+  @include setProperty(font-size, 10);
+  @extend %si-lightFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 12);
+  }
+}
+%si-body-3-regular {
+  @include setProperty(font-size, 10);
+  @extend %si-regularFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 12);
+  }
+}
+%si-body-3-medium {
+  @include setProperty(font-size, 10);
+  @extend %si-mediumFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 12);
+  }
+}
+%si-body-3-bold {
+  @include setProperty(font-size, 10);
+  @extend %si-boldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 12);
+  }
+}
+%si-body-3-blackBold {
+  @include setProperty(font-size, 10);
+  @extend %si-blackBoldFF !optional;
+  @media screen and (min-width: $media-mobile-min) {
+    @include setProperty(font-size, 12);
+  }
+}
