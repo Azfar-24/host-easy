@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider, useRouteError } from 'react-router-dom';
 import Loader from 'components/ui/loader';
 import Header from 'components/header';
+import Footer from 'components/footer';
 
 const AppLayout = lazy(() => import(/* webpackChunkName: "AppLayout" */ '../components/applayout'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ 'pages/Home'));
@@ -31,6 +32,7 @@ const route = [
       <div className='main'>
         <Header />
         <AppLayout />
+        <Footer />
       </div>
     ),
     children: childRoutes,
