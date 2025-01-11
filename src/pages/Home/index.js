@@ -30,7 +30,12 @@ const Home = () => {
           ]
         }}
       >
-        Section
+        <div className='section__container'>
+          <div className='section__grid section__grid--2by2'>
+            <div className=''>a</div>
+            <div className=''>b</div>
+          </div>
+        </div>
       </SectionWrap>
     </>
   );

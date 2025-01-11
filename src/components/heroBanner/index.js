@@ -3,7 +3,7 @@ import Media from 'components/ui/media';
 import Typo from 'components/ui/typo';
 import React from 'react';
 
-const HeroBanner = ({ title, caption, onClick, thumbnailConfig }) => {
+const HeroBanner = ({ title, caption, children, thumbnailConfig }) => {
   return (
     <>
       <div className='main__container--fluid'>
@@ -17,9 +17,7 @@ const HeroBanner = ({ title, caption, onClick, thumbnailConfig }) => {
                 <Typo component={'p'} className='heroBanner__caption'>
                   {caption}
                 </Typo>
-                <div className='heroBanner__cta'>
-                  <BookNowBtn {...onClick} />
-                </div>
+                <div className='heroBanner__cta'>{children ? children : <BookNowBtn />}</div>
               </div>
               <div className='heroBanner__grid-rhs'>
                 <div className='heroBanner__thumbnail'>
