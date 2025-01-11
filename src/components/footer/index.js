@@ -55,7 +55,7 @@ const Footer = () => {
             <div className='footer__grid'>
               <div className='footer__grid-lhs'>
                 <div className='footer__logo'>
-                  <Media imgSrc={require('assets/images/brand-logo.png')} imgAlt='Host Easy' />
+                  <Media imgSrc={'images/brand-logo.png'} imgAlt='Host Easy' />
                 </div>
               </div>
               <div className='footer__grid-rhs'>

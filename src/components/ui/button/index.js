@@ -19,6 +19,8 @@ const button = cva('', {
       primaryLight: 'btn btn__primary-light',
       primaryDark: 'btn btn__primary-dark',
       secondary: 'btn btn__secondary',
+      primaryLightLink: 'btn btn__primary-linkLight',
+      primaryDarkLink: 'btn btn__primary-linkDark',
       onlyIcon: 'btn btn__icon'
     },
     fullWidth: {

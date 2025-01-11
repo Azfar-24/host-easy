@@ -305,6 +305,23 @@ html {
   @include matchTag(var(--accent-warning), var(--neutral-2));
 }
 
+.si-flexbox {
+  align-items: center;
+  @extend %flexbox !optional;
+}
+
+.si-gridbox {
+  @extend %gridbox !optional;
+}
+
+.si-space16 {
+  gap: calc(var(--gutter-space) * 4);
+}
+
+.si-space32 {
+  gap: calc(var(--gutter-space) * 8);
+}
+
 .text-right {
   text-align: right;
 }
@@ -315,4 +332,49 @@ html {
 
 .text-center {
   text-align: center;
+}
+
+
+.sectionWrapper {
+  padding-top: calc(var(--gutter-space) * 12);
+  padding-bottom: calc(var(--gutter-space) * 12);
+  background: hsla(0, 0%, 100%, 1);
+  gap: calc(var(--gutter-space) * 8);
+  @extend %gridbox !optional;
+  @extend %borRad24 !optional;
+
+  &__head {
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+  }
+}
+
+.section__heading {
+  @extend %boldFF !optional;
+  @include setProperty(font-size, 32);
+}
+
+.section__caption {
+  @extend %regularFF !optional;
+  @include setProperty(font-size, 16);
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: var(--gutter-space);
+    }
+  }
+}
+
+.section__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--grid-width);
+}
+
+.section__grid {
+  @extend %gridbox !optional;
+
+  &--2by2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

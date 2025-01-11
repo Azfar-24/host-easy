@@ -14,7 +14,7 @@ const Header = () => {
         <div className='main__container'>
           <div className='header__grid'>
             <CustomLink redirectionURL={'/'} classes={'header__logo'}>
-              <Media imgSrc={require('assets/images/brand-logo.png')} imgAlt='Host Easy' />
+              <Media imgSrc={'images/brand-logo.png'} imgAlt='Host Easy' />
             </CustomLink>
 
             <Navbar />

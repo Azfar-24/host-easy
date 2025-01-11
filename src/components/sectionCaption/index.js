@@ -19,7 +19,7 @@ const SectionCaption = ({ data, textAlign = 'center', classes }) => {
       <div className={clsx(captionProps({ textAlign }), classes)}>
         {data.map((item, index) => (
           <Typo key={index} component={'p'}>
-            {item.caption}
+            {item}
           </Typo>
         ))}
       </div>

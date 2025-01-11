@@ -12,7 +12,7 @@ const Media = ({ imgSrc, imgAlt, restProp, fallback }) => {
   return (
     <>
       <img
-        src={`${imgSrc}?v=${window?.['translations']?.['imgVersion']}`}
+        src={`http://127.0.0.1:5500/${imgSrc}?v=${window?.['translations']?.['imgVersion']}`}
         alt={imgAlt}
         // onError={onImgFailed}
         loading='lazy'

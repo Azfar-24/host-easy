@@ -15,7 +15,7 @@
   padding-left: calc(var(--gutter-space) * 7);
   padding-right: calc(var(--gutter-space) * 7);
   height: var(--cta-height);
-  @extend %regularFF-sec !optional;
+  @extend %boldFF !optional;
   @extend %flexbox !optional;
   @extend %buttonReset !optional;
   @extend %borRad100 !optional;
@@ -85,79 +85,18 @@
     }
   }
 
-  &__accent {
-    background: var(--primary-default);
-    color: var(--static-1);
-
-    &:hover {
-      background: var(--primary-hover);
-    }
-
-    &:active:focus {
-      outline-color: var(--primary-hover);
-    }
-  }
-
-  &__live {
-    background: var(--accent-bright-blue-50);
-    color: var(--static-1);
-
-    &:hover {
-      background: var(--accent-bright-blue-60);
-    }
-
-    &:active:focus {
-      outline-color: var(--accent-bright-blue-60);
-    }
-  }
-
-  &__link {
-    color: var(--text-5);
+  &__primary-linkDark {
+    color: hsla(11, 99%, 61%, 1);
     border-radius: 0;
     padding-left: 0;
     padding-right: 0;
 
-    .btn__innerChild {
-      border-bottom: calc(var(--gutter-space)/2) solid var(--text-5);
-    }
-
     &:hover {
-      color: var(--surface-neutral-7);
-
-      .btn__innerChild {
-        border-bottom-color: var(--surface-neutral-7);
-      }
+      color: hsla(11, 99%, 61%, 1);
     }
 
     &:active:focus {
-      outline-color: var(--surface-neutral-10);
-      padding-left: calc(var(--gutter-space) * 7);
-      padding-right: calc(var(--gutter-space) * 7);
-    }
-  }
-
-  &__ghost {
-    color: var(--text-5);
-
-    &:hover {
-      background: var(--surface-neutral-5);
-    }
-
-    &:active:focus {
-      outline-color: var(--surface-neutral-5);
-    }
-  }
-
-  &__tonal {
-    background: var(--tonal-default);
-    color: var(--text-5);
-
-    &:hover {
-      background: var(--tonal-hover);
-    }
-
-    &:active:focus {
-      outline-color: var(--tonal-hover);
+      color: hsla(11, 77%, 47%, 1);
     }
   }
 
@@ -168,10 +107,6 @@
     @include setProperty(font-size, 18);
     height: var(--cta-height);
   }
-
-  // span ~ i {
-  //   margin-left: 0.4rem;
-  // }
 
   span {
     @include setProperty(font-size, 16);

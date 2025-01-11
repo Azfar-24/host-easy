@@ -17,7 +17,9 @@ const HeroBanner = ({ title, caption, children, thumbnailConfig }) => {
                 <Typo component={'p'} className='heroBanner__caption'>
                   {caption}
                 </Typo>
-                <div className='heroBanner__cta'>{children ? children : <BookNowBtn />}</div>
+                <div className='heroBanner__cta'>
+                  {children ? children : <BookNowBtn isLightLink={true} />}
+                </div>
               </div>
               <div className='heroBanner__grid-rhs'>
                 <div className='heroBanner__thumbnail'>

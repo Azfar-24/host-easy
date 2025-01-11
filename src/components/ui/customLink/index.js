@@ -1,12 +1,46 @@
+import { cva } from 'class-variance-authority';
+import clsx from 'clsx';
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
-function CustomLink({ children, classes, redirectionURL, restProps }) {
+const linkProps = cva('', {
+  variants: {
+    disabled: {
+      true: 'disabled'
+    },
+
+    variant: {
+      primaryLight: 'btn btn__primary-light',
+      primaryDark: 'btn btn__primary-dark',
+      secondary: 'btn btn__secondary',
+      primaryLightLink: 'btn btn__primary-linkLight',
+      primaryDarkLink: 'btn btn__primary-linkDark',
+      onlyIcon: 'btn btn__icon'
+    },
+    fullWidth: {
+      true: 'btn--fullWidth'
+    }
+  }
+});
+
+function CustomLink({
+  children,
+  variant,
+  disabled,
+  fullWidth,
+  classes,
+  redirectionURL,
+  restProps
+}) {
   const navigate = useNavigate();
   return (
     <>
-      <Link to={redirectionURL} className={classes} {...restProps}>
+      <Link
+        to={redirectionURL}
+        className={clsx(linkProps({ variant, disabled, fullWidth }), classes)}
+        {...restProps}
+      >
         {children}
       </Link>
     </>

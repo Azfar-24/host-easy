@@ -1,45 +1,116 @@
 @use '../config'as *;
 
-.sectionWrapper {
-  padding-top: calc(var(--gutter-space) * 12);
-  padding-bottom: calc(var(--gutter-space) * 12);
-  background: hsla(0, 0%, 100%, 1);
-  gap: calc(var(--gutter-space) * 4);
-  @extend %gridbox !optional;
-  @extend %borRad24 !optional;
 
-  &__head {
-    gap: calc(var(--gutter-space) * 4);
+.card {
+  gap: calc(var(--gutter-space) * 4);
+  align-content: flex-start;
+  @extend %gridbox !optional;
+
+  &__body {
+    gap: calc(var(--gutter-space) * 2);
     @extend %gridbox !optional;
   }
-}
 
-.section__heading {
-  @extend %boldFF !optional;
-  @include setProperty(font-size, 32);
-}
+  &__grid {
+    gap: calc(var(--gutter-space) * 4);
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+  }
 
-.section__caption {
-  @extend %regularFF !optional;
-  @include setProperty(font-size, 16);
+  &__thumbnail {
+    background-color: red;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    @extend %borRad16 !optional;
 
-  p {
-    &:not(:last-child) {
-      margin-bottom: var(--gutter-space);
+    img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
     }
   }
-}
 
-.section__container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: var(--grid-width);
-}
-
-.section__grid {
-  @extend %gridbox !optional;
-
-  &--2by2 {
-    grid-template-columns: repeat(2, 1fr);
+  &__title {
+    color: hsla(0, 0%, 12%, 1);
+    @extend %mediumFF !optional;
+    @include setProperty(font-size, 26);
   }
+
+  &__cta {}
+
+  &__description {
+    color: hsla(0, 0%, 12%, 1);
+    @extend %regularFF !optional;
+    @include setProperty(font-size, 16);
+  }
+}
+
+
+.eventExpertise {
+  &__wrap {}
+
+  &__grid {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--grid-width);
+    gap: calc(var(--gutter-space) * 6);
+    justify-content: center;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+  }
+
+  &__card {
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    gap: calc(var(--gutter-space) * 5);
+    align-content: flex-start;
+    @extend %gridbox !optional;
+
+    &-icon {
+      margin: 0 auto;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      @extend %borRad100 !optional;
+      @include setProperty(width, 56);
+
+      img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-content {
+      gap: calc(var(--gutter-space) * 2);
+      @extend %gridbox !optional;
+    }
+
+    &-title {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 20);
+    }
+
+    &-description {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 16);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 }
