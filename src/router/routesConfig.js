@@ -1,6 +1,3 @@
-import AboutUs from 'pages/aboutUs';
-import Hosthands from 'pages/hostHands';
-
 export const routes = {
   home: {
     id: '1',
@@ -9,25 +6,25 @@ export const routes = {
     transKey: 'navigationTabHome',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: true
   },
-  bartender: {
+  services: {
     id: '2',
-    name: 'Bartender',
-    path: '/bartender',
-    transKey: 'navigationTabBartender',
+    name: 'Services',
+    path: '/services',
+    transKey: 'navigationTabServices',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: false
   },
-  hosthands: {
+  events: {
     id: '3',
-    name: 'Host Hands',
-    path: '/host-hands',
-    transKey: 'navigationTabHosthands',
+    name: 'Events',
+    path: '/events',
+    transKey: 'navigationTabEvents',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: false
   },
   aboutUs: {
     id: '4',
@@ -36,7 +33,7 @@ export const routes = {
     transKey: 'navigationTabAboutUs',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: true
   },
   faq: {
     id: '5',
@@ -45,7 +42,7 @@ export const routes = {
     transKey: 'navigationTabFaq',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: true
   },
 
   privacyPolicy: {
@@ -55,7 +52,7 @@ export const routes = {
     transKey: 'navigationTabPrivacyPolicy',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: true
   },
   tnc: {
     id: '7',
@@ -64,7 +61,7 @@ export const routes = {
     transKey: 'navigationTabTnc',
     authRequired: false,
     hideMenu: false,
-    cookieRequired: false
+    clickable: true
   }
 };
 

@@ -4,12 +4,12 @@ import Loader from 'components/ui/loader';
 import Header from 'components/header';
 import Footer from 'components/footer';
 import { routes } from './routesConfig';
-import Bartender from 'pages/bartender';
-import Hosthands from 'pages/hostHands';
 import AboutUs from 'pages/aboutUs';
 import FAQ from 'pages/faq';
 import TnC from 'pages/tnc';
 import PrivacyPolicy from 'pages/privacyPolicy';
+import ServiceDetails from 'pages/serviceDetails';
+import EventDetails from 'pages/eventDetails';
 
 const AppLayout = lazy(() => import(/* webpackChunkName: "AppLayout" */ '../components/applayout'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ 'pages/Home'));
@@ -20,13 +20,14 @@ const childRoutes = [
     element: <Home />
   },
   {
-    path: routes.bartender.path,
-    element: <Bartender />
+    path: `${routes.services.path}/:serviceId`,
+    element: <ServiceDetails />
   },
   {
-    path: routes.hosthands.path,
-    element: <Hosthands />
+    path: `${routes.events.path}/:eventId`,
+    element: <EventDetails />
   },
+
   {
     path: routes.aboutUs.path,
     element: <AboutUs />

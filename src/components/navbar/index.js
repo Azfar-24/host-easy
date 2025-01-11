@@ -9,10 +9,11 @@ const Navbar = () => {
     const nav = routesArr
       .filter((showRoute) => showRoute.hideMenu !== true)
       .map((route, index) => {
-        const { id, path, name, transKey } = route;
+        const { id, path, name, transKey, clickable } = route;
         return (
           <li key={id} id={id}>
-            <NavLink to={path}>{name}</NavLink>
+            {/* <NavLink to={path}>{name}</NavLink> */}
+            {clickable ? <NavLink to={path}>{name}</NavLink> : <span>{route.name}</span>}
           </li>
         );
       });

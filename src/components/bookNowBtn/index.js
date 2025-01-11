@@ -4,7 +4,10 @@ import React from 'react';
 const BookNowBtn = ({ isLight }) => {
   return (
     <>
-      <CustomLink variant={`${isLight ? 'primaryLight' : 'primaryDark'}`} redirectionURL={'/'}>
+      <CustomLink
+        variant={`${isLight ? 'primaryLight' : 'primaryDark'}`}
+        redirectionURL={'events/1'}
+      >
         Book Now
       </CustomLink>
     </>
