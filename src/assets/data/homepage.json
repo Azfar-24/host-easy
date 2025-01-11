@@ -4,56 +4,5 @@
     "description": "With Host Easy, enjoy professional HostHands and Bartenders who take care of everything. Focus on your guests while we handle the rest!",
     "thumbnail": "images/banners/hp-herobanner.png",
     "cta": true
-  },
-  "serviceSection": {
-    "title": "Stop Making Party Hosting Complicated!",
-    "description": [
-      {
-        "caption": "Enjoy your birthday parties, family reunions, bridal showers and more with our amazing party help. "
-      },
-      {
-        "caption": "We know what it’s like to simply host a great party. We know it can be stressful."
-      },
-      {
-        "caption": "We’re here to help you be the best host you can be with Host Easy."
-      }
-    ],
-    "cards": [
-      {
-        "thumbnail": "images/services/host-hands.jpg",
-        "title": "Host-Hands",
-        "description": "Our Host-Hands handle the day-of tasks so you can focus on your guests. From pre-party setup, party service, and party cleanup, your Host-Hand is there to handle the details. Get back to hosting your guests and enjoying the party. Our Host-Hands will take care of the rest."
-      },
-      {
-        "thumbnail": "images/services/bartenders.jpg",
-        "title": "Bartenders",
-        "description": "Our Bartenders serve up world-class beverages year-round. Have an idea for a custom cocktail for your event? We can make it happen. From pre-party prep to beverage service and cleanup, our bartenders always serve the best cocktails with a smile."
-      }
-    ]
-  },
-  "yourEventOurExpertiseSection": {
-    "section_heading": "Your Event, Our Expertise: The Host Easy Promise!",
-    "data": [
-      {
-        "thumbnail": "images/your-event-our-expertise/yeoe_simple.svg",
-        "title": "Simple",
-        "description": "Fill out a form, make your payment, and we show up to help make your party happen. It’s that easy."
-      },
-      {
-        "thumbnail": "images/your-event-our-expertise/yeoe_effortless.svg",
-        "title": "Effortless",
-        "description": "Booking our Host-Hands means less hassle and more time to enjoy your event, with everything handled seamlessly."
-      },
-      {
-        "thumbnail": "images/your-event-our-expertise/yeoe_flexible.svg",
-        "title": "Flexible",
-        "description": "Need streamers hung? We got it. Need someone to operate a cotton candy machine? We did that (yes, really)."
-      },
-      {
-        "thumbnail": "images/your-event-our-expertise/yeoe_trusted.svg",
-        "title": "Trusted",
-        "description": "All party helpers are professionally trained and background-checked. So you never have to worry about who you're working with!"
-      }
-    ]
   }
 }

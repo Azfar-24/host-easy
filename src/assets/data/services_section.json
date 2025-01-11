@@ -1,0 +1,28 @@
+{
+  "serviceSection": {
+    "title": "Stop Making Party Hosting Complicated!",
+    "description": [
+      {
+        "caption": "Enjoy your birthday parties, family reunions, bridal showers and more with our amazing party help. "
+      },
+      {
+        "caption": "We know what it’s like to simply host a great party. We know it can be stressful."
+      },
+      {
+        "caption": "We’re here to help you be the best host you can be with Host Easy."
+      }
+    ],
+    "cards": [
+      {
+        "thumbnail": "images/services/host-hands.jpg",
+        "title": "Host-Hands",
+        "description": "Our Host-Hands handle the day-of tasks so you can focus on your guests. From pre-party setup, party service, and party cleanup, your Host-Hand is there to handle the details. Get back to hosting your guests and enjoying the party. Our Host-Hands will take care of the rest."
+      },
+      {
+        "thumbnail": "images/services/bartenders.jpg",
+        "title": "Bartenders",
+        "description": "Our Bartenders serve up world-class beverages year-round. Have an idea for a custom cocktail for your event? We can make it happen. From pre-party prep to beverage service and cleanup, our bartenders always serve the best cocktails with a smile."
+      }
+    ]
+  }
+}

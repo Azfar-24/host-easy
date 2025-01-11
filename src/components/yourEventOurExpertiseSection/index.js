@@ -3,8 +3,8 @@ import Media from 'components/ui/media';
 import Typo from 'components/ui/typo';
 import React from 'react';
 
-var homepageJSON = require('../../assets/data/homepage.json');
-const { yourEventOurExpertiseSection } = homepageJSON;
+var eventExpertiseJSON = require('../../assets/data/yourEventOurExpertiseSection.json');
+const { yourEventOurExpertiseSection } = eventExpertiseJSON;
 const YourEventOurExpertiseSection = () => {
   return (
     <>

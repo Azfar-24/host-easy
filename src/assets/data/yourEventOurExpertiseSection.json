@@ -1,0 +1,27 @@
+{
+  "yourEventOurExpertiseSection": {
+    "section_heading": "Your Event, Our Expertise: The Host Easy Promise!",
+    "data": [
+      {
+        "thumbnail": "images/your-event-our-expertise/yeoe_simple.svg",
+        "title": "Simple",
+        "description": "Fill out a form, make your payment, and we show up to help make your party happen. It’s that easy."
+      },
+      {
+        "thumbnail": "images/your-event-our-expertise/yeoe_effortless.svg",
+        "title": "Effortless",
+        "description": "Booking our Host-Hands means less hassle and more time to enjoy your event, with everything handled seamlessly."
+      },
+      {
+        "thumbnail": "images/your-event-our-expertise/yeoe_flexible.svg",
+        "title": "Flexible",
+        "description": "Need streamers hung? We got it. Need someone to operate a cotton candy machine? We did that (yes, really)."
+      },
+      {
+        "thumbnail": "images/your-event-our-expertise/yeoe_trusted.svg",
+        "title": "Trusted",
+        "description": "All party helpers are professionally trained and background-checked. So you never have to worry about who you're working with!"
+      }
+    ]
+  }
+}

@@ -305,20 +305,22 @@ html {
   @include matchTag(var(--accent-warning), var(--neutral-2));
 }
 
-.si-flexbox {
+
+
+.gridbox {
+  @extend %gridbox !optional;
+}
+
+.flexbox {
   align-items: center;
   @extend %flexbox !optional;
 }
 
-.si-gridbox {
-  @extend %gridbox !optional;
-}
-
-.si-space16 {
+.space16 {
   gap: calc(var(--gutter-space) * 4);
 }
 
-.si-space32 {
+.space32 {
   gap: calc(var(--gutter-space) * 8);
 }
 
