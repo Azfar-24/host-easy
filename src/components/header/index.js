@@ -7,18 +7,10 @@ const Header = () => {
   const { pathname } = useLocation();
 
   return (
-    <header>
-      <div className='header__left'>
-        <Typo component={'h5'} className='header__productTitle'>
-          Host Easy
-        </Typo>
-      </div>
-      <Navbar />
-      <div className='header__right'>
-        <div className='user-profile'>
-          {/* <img src={require(assets/images/default-profile.png)} alt='' /> */}
-        </div>
-      </div>
+    <header className='header__wrap'>
+      <section className='main__container'>
+        <Navbar />
+      </section>
     </header>
   );
 };

@@ -1,1 +1,11 @@
-@use '../config' as *;
+@use '../config'as *;
+
+.header {
+  &__wrap {
+    background: hsla(11, 99%, 61%, 1);
+    width: 100%;
+    padding: 0;
+    @include setProperty(min-height, 80);
+    @extend %borRad24 !optional;
+  }
+}

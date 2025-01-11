@@ -8,64 +8,35 @@
   --download: hsla(213, 5%, 39%, 1);
 
   /* primary */
-  --primary-1: hsla(47, 87%, 58%, 1);
-  --primary-2: hsla(43, 89%, 53%, 1);
-  --primary-3: hsla(34, 89%, 51%, 1);
-  --primary-4: hsla(47, 87%, 58%, 1);
-  --primary-5: hsla(47, 80%, 75%, 1);
+  --primary-1: hsla(11, 99%, 61%, 1);
+  --primary-2: hsla(11, 85%, 57%, 1);
+  --primary-3: hsla(11, 79%, 56%, 1);
+  --primary-4: transparent;
+  --primary-5: transparent;
   /* secondary */
-  --secondary-1: hsla(0, 0%, 0%, 1);
-  --secondary-2: hsla(240, 27%, 6%, 1);
-  --secondary-3: hsla(232, 14%, 21%, 1);
-  --secondary-4: hsla(236, 8%, 33%, 1);
-  --secondary-5: hsla(240, 2%, 48%, 1);
+  --secondary-1: hsla(9, 100%, 96%, 1);
+  --secondary-2: transparent;
+  --secondary-3: transparent;
+  --secondary-4: transparent;
+  --secondary-5: transparent;
   /* neutral */
-  --neutral-1: hsl(0, 0%, 0%);
-  --neutral-2: hsl(0, 0%, 100%);
-  --neutral-3: hsla(30, 10%, 8%, 1);
-  --neutral-4: hsla(0, 0%, 54%, 1);
-  --neutral-5: hsla(0, 0%, 91%, 1);
-  --neutral-6: hsla(235, 100%, 12%, 1);
-  --neutral-7: hsla(49, 89%, 60%, 0.4);
-  --neutral-8: hsla(16, 88%, 54%, 0.4);
-  --neutral-9: hsla(0, 0%, 100%, 0.16);
-  --neutral-10: hsla(0, 0%, 0%, 0.16);
+  --neutral-1: hsla(0, 0%, 12%, 1);
+  --neutral-2: hsla(0, 0%, 100%, 1);
+  --neutral-3: hsla(240, 8%, 95%, 1);
+
   // background
-  --background-1: hsla(240, 27%, 6%, 1);
+  --background-1: hsla(240, 8%, 95%, 1);
   --background-2: hsla(0, 0%, 100%, 1);
-  --background-3: hsla(214, 21%, 94%, 1);
-  --background-4: hsla(216, 32%, 96%, 1);
-  --background-5: hsla(232, 14%, 21%, 1);
-  /* gradient */
-  --gradient-1: linear-gradient(179.57deg, hsl(49, 89%, 60%) 0.37%, hsl(43, 74%, 42%) 99.63%);
-  --gradient-2: linear-gradient(180deg, hsl(211, 100%, 50%) 0%, hsl(235, 100%, 12%) 100%);
-  --gradient-3: linear-gradient(180deg, hsl(40, 100%, 50%) 0%, hsl(16, 88%, 54%) 100%);
-  --gradient-4: linear-gradient(360deg, hsl(30, 10%, 8%) -59%, hsl(0, 0%, 54%) 132.99%);
-  --gradient-5: transparent;
-  /* Trend */
-  --trend-up: hsla(108, 100%, 35%, 1);
-  --trend-down: hsla(0, 100%, 50%, 1);
-  --trend-same: hsla(336, 9%, 45%, 1);
+
   /* accent */
   --accent-error: hsla(4, 74%, 49%, 1);
   --accent-error-faded: hsla(5, 70%, 90%, 1);
-  --accent-success: hsla(155, 97%, 24%, 1);
-  --accent-success-faded: hsla(155, 31%, 85%, 1);
-  --accent-warning: hsla(34, 94%, 50%, 1);
-  --accent-info: hsla(211, 100%, 50%, 1);
+  --accent-success: hsla(97, 95%, 29%, 1);
+  --accent-success-faded: hsla(143, 73%, 66%, 1);
+  --accent-warning: hsla(36, 100%, 64%, 1);
+  --accent-info: hsla(195, 100%, 50%, 1);
   --accent-1: hsla(49, 89%, 60%, 1);
 
-  /* Tag */
-  --upcoming: hsla(247, 100%, 57%, 1);
-  --live: hsla(53, 100%, 50%, 1);
-  --completed: hsla(0, 0%, 96%, 1);
-  --result: hsla(0, 0%, 96%, 1);
-  --abandoned: hsla(0, 100%, 50%, 1);
-  --not-playing: hsla(29, 100%, 50%, 1);
-  --rank: hsla(247, 100%, 57%, 1);
-  --points: hsla(165, 100%, 44%, 1);
-
-  --inprogress: hsla(202, 60%, 43%, 1);
 
   /* primary-cta */
   --cta-primary: linear-gradient(179.57deg, hsl(49, 89%, 60%) 0.37%, hsl(43, 74%, 42%) 99.63%);
@@ -97,7 +68,7 @@
   --overlay-bg-close: hsl(0, 0%, 100%);
 
   /* navbar */
-  --nav-bg: hsla(38, 34%, 59%, 1);
+  --nav-bg: transparent;
   --nav-text: hsla(0, 0%, 100%, 1);
   --nav-active-stroke: hsla(0, 0%, 100%, 1);
   --nav-active-bg: hsla(34, 44%, 93%, 1);
@@ -157,5 +128,5 @@
   --checkbox-unchecked: hsla(0, 0%, 100%, 1);
   --checkbox-unchecked-stroke: hsla(29, 91%, 53%, 1);
 
-  --main-bg: hsla(235, 100%, 12%, 1);
+  --main-bg: hsla(240, 8%, 95%, 1);
 }

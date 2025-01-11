@@ -1,4 +1,4 @@
-@use '../config/mixins' as *;
+@use '../config/mixins'as *;
 $image-version: '0.1';
 $full-space: setUnit(16);
 $half-space: setUnit(8);
@@ -74,10 +74,9 @@ $media-xlg-desktop-min: 1400px;
 $media-xlg-desktop-max: 1399.98px;
 
 @media screen and (min-width: $media-mobile-min) {
-  :root {
-  }
+  :root {}
 }
+
 @media screen and (min-width: $media-desktop-min) {
-  :root {
-  }
+  :root {}
 }

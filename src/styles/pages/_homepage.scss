@@ -1,1 +1,9 @@
-@use '../config' as *;
+@use '../config'as *;
+
+.heroBanner {
+  &__wrap {
+    min-height: var(--window-inner-height);
+    background: hsla(0, 0%, 100%, 1);
+    @extend %borRad24 !optional;
+  }
+}
