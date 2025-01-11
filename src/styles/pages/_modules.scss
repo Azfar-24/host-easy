@@ -1,1 +1,29 @@
-@use '../config' as *;
+@use '../config'as *;
+
+.sectionWrapper {
+  padding-top: calc(var(--gutter-space) * 12);
+  padding-bottom: calc(var(--gutter-space) * 12);
+  background: hsla(0, 0%, 100%, 1);
+  @extend %borRad24 !optional;
+
+  &__head {
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+  }
+}
+
+.section__heading {
+  @extend %boldFF !optional;
+  @include setProperty(font-size, 32);
+}
+
+.section__caption {
+  @extend %regularFF !optional;
+  @include setProperty(font-size, 16);
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: var(--gutter-space);
+    }
+  }
+}

@@ -5,7 +5,170 @@
     background: hsla(11, 99%, 61%, 1);
     width: 100%;
     padding: 0;
-    @include setProperty(min-height, 80);
+    justify-content: stretch;
+    align-items: center;
+    @extend %flexbox !optional;
     @extend %borRad24 !optional;
+    @include setProperty(min-height, 80);
+  }
+
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 3);
+    justify-content: flex-end;
+    align-items: center;
+    @extend %flexbox !optional;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: auto;
+    aspect-ratio: 21/9;
+    justify-content: center;
+    align-items: center;
+    @extend %flexbox !optional;
+    @include setProperty(width, 110);
+
+    img {
+      width: 100%;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__cta {}
+
+}
+
+.footer {
+  &__wrap {
+    overflow: hidden;
+    background: hsla(11, 99%, 61%, 1);
+    width: 100%;
+    padding: 0;
+    @extend %borRad24 !optional;
+  }
+
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 6);
+    padding: calc(var(--gutter-space) * 6) 0;
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+
+    &-lhs {}
+
+    &-rhs {
+      gap: calc(var(--gutter-space) * 6);
+      padding: calc(var(--gutter-space) * 4) 0;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @extend %flexbox !optional;
+    }
+  }
+
+  &__logo {
+    aspect-ratio: 21/9;
+    justify-content: center;
+    align-items: center;
+    @extend %flexbox !optional;
+    @include setProperty(width, 200);
+
+    img {
+      width: 100%;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__links {
+    column-fill: balance;
+    columns: auto 2;
+    column-gap: calc(var(--gutter-space) * 6);
+
+    a {
+      display: block;
+      color: hsla(0, 0%, 100%, 1);
+      @include setProperty(font-size, 14);
+      @extend %regularFF !optional;
+
+      &:not(:last-child) {
+        margin-bottom: calc(var(--gutter-space) * 4);
+      }
+    }
+  }
+}
+
+.copyright {
+  &__wrap {
+    padding: calc(var(--gutter-space) * 6) 0;
+    background: hsla(0, 0%, 12%, 0.1);
+  }
+
+  &__grid {
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+
+    &-lhs {}
+
+    &-rhs {}
+  }
+
+  &__text {
+    color: hsla(0, 0%, 100%, 1);
+    @include setProperty(font-size, 14);
+    @extend %regularFF !optional;
+  }
+
+  &__links {
+    gap: calc(var(--gutter-space) * 8);
+    justify-content: space-between;
+    align-items: center;
+    @extend %flexbox !optional;
+
+    a {
+      display: block;
+      color: hsla(0, 0%, 100%, 1);
+      @include setProperty(font-size, 14);
+      @extend %regularFF !optional;
+    }
+  }
+}
+
+.social {
+  &__wrap {
+    justify-items: end;
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+  }
+
+  &__title {
+    color: hsla(0, 0%, 100%, 1);
+    @include setProperty(font-size, 14);
+    @extend %regularFF !optional;
+  }
+
+
+  &__icon {
+    background-color: hsla(0, 0%, 100%, 1);
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-items: center;
+    @extend %flexbox !optional;
+    @include setProperty(width, 24);
+    @include setProperty(height, 24);
+  }
+
+  &__link {
+    gap: calc(var(--gutter-space) * 4);
+    justify-self: end;
+    align-items: center;
+    @extend %flexbox !optional;
   }
 }

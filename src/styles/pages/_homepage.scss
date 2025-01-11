@@ -2,8 +2,59 @@
 
 .heroBanner {
   &__wrap {
-    min-height: var(--window-inner-height);
     background: hsla(0, 0%, 100%, 1);
     @extend %borRad24 !optional;
+  }
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 4);
+    justify-content: center;
+    align-items: center;
+    @extend %flexbox !optional;
+
+    &-lhs,
+    &-rhs {
+      flex-basis: 50%;
+      flex-grow: 1;
+    }
+
+    &-lhs {
+      flex-grow: 1;
+      gap: calc(var(--gutter-space) * 4);
+      @extend %gridbox !optional;
+    }
+
+    &-rhs {
+      flex-shrink: 0;
+    }
+  }
+
+
+  &__title {
+    color: hsla(0, 0%, 12%, 1);
+    @include setProperty(font-size, 40);
+    @extend %boldFF !optional;
+  }
+
+  &__caption {
+    color: hsla(0, 0%, 12%, 1);
+    @include setProperty(font-size, 16);
+    @extend %regularFF !optional;
+  }
+
+  &__cta {
+    margin-top: calc(var(--gutter-space) * 3);
+  }
+
+  &__thumbnail {
+    width: 100%;
+    @include setProperty(max-width, 600);
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      aspect-ratio: 1/1;
+    }
   }
 }

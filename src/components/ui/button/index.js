@@ -16,23 +16,19 @@ const button = cva('', {
       true: 'selected'
     },
     variant: {
-      primary: 'btn btn__primary',
+      primaryLight: 'btn btn__primary-light',
+      primaryDark: 'btn btn__primary-dark',
       secondary: 'btn btn__secondary',
-      primaryOutline: 'btn btn__primary btn__primary--outline',
-      secondaryOutline: 'btn btn__secondary btn__secondary--outline',
-      primaryLink: 'btn btn__primary btn__primary--link',
-      secondaryLink: 'btn btn__secondary btn__secondary--link',
       onlyIcon: 'btn btn__icon'
+    },
+    fullWidth: {
+      true: 'btn--fullWidth'
     },
     size: {
       sm: 'btn--sm',
       md: 'btn--md',
       lg: 'btn--lg'
     }
-  },
-
-  defaultVariants: {
-    variant: ''
   }
 });
 
@@ -40,6 +36,7 @@ const Button = ({
   variant,
   size,
   selected,
+  fullWidth,
   disabled,
   children,
   leadingIcon,
@@ -47,22 +44,24 @@ const Button = ({
   classes,
   trackingKey,
   transKey,
-  isContinue,
-  allVotesSelected,
   ...restProps
 }) => {
-  isContinue && !allVotesSelected ? (disabled = true) : (disabled = disabled);
   return (
     <button
       id={TRACKING_ELEMENT_ID}
       track-event={trackingKey ? serialize(trackingKey) : ''}
       disabled={disabled}
-      className={clsx(button({ variant, size, selected, disabled, leadingIcon }), classes)}
+      className={clsx(
+        button({ variant, size, selected, disabled, leadingIcon, fullWidth }),
+        classes
+      )}
       {...restProps}
     >
-      {children &&
-        (transKey ? window?.['translations']?.[transKey] ?? <span>{children}</span> : children)}
-      {icon && <i className={icon}></i>}
+      <div className='btn__innerChild'>
+        {children &&
+          (transKey ? window?.['translations']?.[transKey] ?? <span>{children}</span> : children)}
+        {icon && <i className={icon}></i>}
+      </div>
     </button>
   );
 };

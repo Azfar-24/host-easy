@@ -32,7 +32,7 @@ export const routes = {
   aboutUs: {
     id: '4',
     name: 'About Us',
-    path: '/aboutUs',
+    path: '/about-us',
     transKey: 'navigationTabAboutUs',
     authRequired: false,
     hideMenu: false,
@@ -59,7 +59,7 @@ export const routes = {
   },
   tnc: {
     id: '7',
-    name: 'TnC',
+    name: 'Terms & Conditions',
     path: '/tnc',
     transKey: 'navigationTabTnc',
     authRequired: false,

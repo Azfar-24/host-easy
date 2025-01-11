@@ -304,3 +304,15 @@ html {
 .warning {
   @include matchTag(var(--accent-warning), var(--neutral-2));
 }
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}

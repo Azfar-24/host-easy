@@ -69,10 +69,10 @@
 
   /* navbar */
   --nav-bg: transparent;
-  --nav-text: hsla(0, 0%, 100%, 1);
+  --nav-text: hsla(0, 0%, 100%, .6);
   --nav-active-stroke: hsla(0, 0%, 100%, 1);
-  --nav-active-bg: hsla(34, 44%, 93%, 1);
-  --nav-active-text: hsla(278, 100%, 11%, 1);
+  --nav-active-bg: transparent;
+  --nav-active-text: hsla(0, 0%, 100%, 1);
 
   /* tab */
   --tab-bg: hsla(0, 0%, 91%, 1);
