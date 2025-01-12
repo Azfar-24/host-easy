@@ -1,0 +1,27 @@
+{
+  "exceptionalEventSupportSection": {
+    "section_heading": "Connecting You to Exceptional Event Support",
+    "description": [
+      {
+        "caption": "Just three steps to find your perfect Host-Hand: Fill out a form, get matched, and meet your helper!"
+      }
+    ],
+    "data": [
+      {
+        "title": "Fill & Submit",
+        "description": "Fill out a short questionnaire to get an estimate",
+        "isCta": true,
+        "url": "/event-support"
+      },
+      {
+        "title": "Connect",
+        "description": "Get connected with the perfect party helper based on your event needs"
+      },
+      {
+        "title": "Meet",
+        "description": "Meet the Host-Hand at your event ",
+        "hint": "Hint: They’re the ones in those awesome Host Easy aprons"
+      }
+    ]
+  }
+}

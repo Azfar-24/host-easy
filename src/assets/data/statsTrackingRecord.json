@@ -1,0 +1,29 @@
+{
+  "statsTrackerSection": {
+    "data": [
+      {
+        "value": "98",
+        "slug": "%",
+        "title": "Happy Customers",
+        "caption": "98% of our clients would recommend us to their friends."
+      },
+      {
+        "value": "50",
+        "slug": "+",
+        "title": "Skilled Professionals",
+        "caption": "A team of 50+ skilled bartenders and event helpers."
+      },
+      {
+        "value": "4.9",
+        "slug": "/5",
+        "title": "Ratings",
+        "caption": "Rated 4.9/5 by our clients for professionalism and reliability."
+      },
+      {
+        "value": "1000",
+        "title": "Memorable Events",
+        "caption": "Helping create 1,000+ unforgettable event experiences."
+      }
+    ]
+  }
+}

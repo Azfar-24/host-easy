@@ -1,6 +1,5 @@
 @use '../config'as *;
 
-
 .card {
   gap: calc(var(--gutter-space) * 4);
   align-content: flex-start;
@@ -47,7 +46,6 @@
     @include setProperty(font-size, 16);
   }
 }
-
 
 .eventExpertise {
   &__wrap {}
@@ -113,5 +111,312 @@
     align-items: center;
     display: flex;
 
+    .sectionWrapperGrid {
+      gap: calc(var(--gutter-space) * 6);
+      justify-content: space-between;
+      align-items: flex-start;
+      @extend %flexbox !optional;
+
+      &__lhs,
+      &__rhs {
+        flex-grow: 1;
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+.timeline {
+  &__wrap {}
+
+  &__list {}
+
+  &__box {
+    position: relative;
+    gap: calc(var(--gutter-space) * 3);
+    justify-content: flex-start;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+
+    &:not(:last-of-type) {
+      padding-bottom: calc(var(--gutter-space) * 8);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: calc(32px /2);
+        width: 1px;
+        height: 100%;
+        background: hsla(11, 99%, 61%, 1);
+      }
+    }
+
+    &-count {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: var(--border-1) solid hsla(11, 99%, 61%, 1);
+      background: hsla(0, 0%, 100%, 1);
+      aspect-ratio: 1/1;
+      justify-content: center;
+      align-items: center;
+      color: hsla(11, 99%, 61%, 1);
+      @extend %flexbox !optional;
+      @extend %borRad100 !optional;
+      @extend %boldFF !optional;
+      @include setProperty(font-size, 16);
+      @include setProperty(width, 32);
+    }
+
+    &-dtls {
+      gap: calc(var(--gutter-space) * 4);
+      @extend %gridbox !optional;
+    }
+
+    &-title {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 26);
+    }
+
+    &-caption {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 16);
+    }
+
+    &-cta {
+      justify-content: flex-start;
+      align-items: center;
+      @extend %flexbox !optional;
+    }
+
+    &-hint {
+      @extend %lightFF !optional;
+      @include setProperty(font-size, 14);
+      color: hsla(0, 0%, 12%, 0.5);
+    }
+  }
+}
+
+.testify {
+  &__wrap {}
+
+  &__swiper {
+    overflow: hidden;
+
+    .swiper-slide {
+      height: auto;
+      align-items: center;
+      @extend %gridbox !optional;
+
+      &:not(.swiper-slide-active) {
+        .testify__card {
+          height: 80%;
+        }
+      }
+
+      &.swiper-slide-active {
+        .testify__card {
+          aspect-ratio: 4/3;
+          background: hsla(11, 99%, 61%, 1);
+
+          &::after {
+            opacity: 1;
+          }
+
+          &-review {
+            color: hsla(0, 0%, 100%, 1);
+          }
+
+          &-author {
+            color: hsla(0, 0%, 100%, .7);
+          }
+        }
+      }
+    }
+  }
+
+  &__card {
+    padding: calc(var(--gutter-space) * 8);
+    position: relative;
+    background: hsla(9, 100%, 96%, 1);
+    justify-content: center;
+    align-items: center;
+    @extend %flexbox !optional;
+    @extend %borRad16 !optional;
+    @include transition(opacity 0.1s linear,
+      height 0.2s linear,
+      background-color 0.1s linear,
+      color 0.1s linear);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: var(--quoates-bg);
+    }
+
+    &-box {
+      position: relative;
+      z-index: 1;
+      gap: calc(var(--gutter-space) * 4);
+      @extend %gridbox !optional;
+    }
+
+    &-review {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 20);
+    }
+
+    &-author {
+      color: hsla(0, 0%, 12%, 0.7);
+      @extend %boldFF !optional;
+      @include setProperty(font-size, 14);
+    }
+  }
+}
+
+.capturedCelebration {
+  &__wrap {
+    overflow: hidden;
+  }
+
+  &__swiper {
+    overflow: hidden;
+
+    .swiper-slide {
+      @include setProperty(width, 240);
+      aspect-ratio: 2/3;
+      height: auto;
+      align-items: center;
+      @extend %gridbox !optional;
+    }
+  }
+
+  &__card {
+    &-box {
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 2/3;
+      @extend %borRad16 !optional;
+
+      img,
+      video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.stats {
+  &__wrap {}
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 6);
+    justify-content: center;
+    align-items: stretch;
+    @extend %flexbox !optional;
+  }
+
+  &__card {
+
+    max-width: calc(100% /4);
+    width: 100%;
+    flex-basis: 100%;
+    flex-grow: 1;
+    text-align: center;
+    aspect-ratio: 4/3;
+    padding: calc(var(--gutter-space) * 8) calc(var(--gutter-space) * 6);
+    background: hsla(0, 0%, 100%, 1);
+    gap: calc(var(--gutter-space) * 2);
+    justify-items: center;
+    align-content: center;
+    @extend %gridbox !optional;
+    @extend %borRad24 !optional;
+
+    &-value {
+      line-height: 1;
+      color: hsla(11, 99%, 61%, 1);
+      @extend %boldFF !optional;
+      @include setProperty(font-size, 76);
+    }
+
+    &-heading {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 20);
+    }
+
+    &-caption {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 16);
+    }
+  }
+}
+
+.ourEventMoment {
+  &__wrap {}
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 6);
+    justify-content: flex-start;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+
+    &-item {
+      width: 100%;
+      flex-grow: 1;
+      flex-basis: calc(100% /4);
+      gap: calc(var(--gutter-space) * 6);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @extend %flexbox !optional;
+
+      &:not(:nth-of-type(odd)) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__thumb {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+    @extend %borRad16 !optional;
+
+    img,
+    video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &:nth-child(4n) {
+      aspect-ratio: 2/3;
+
+      img,
+      video {
+        aspect-ratio: 2/3;
+      }
+    }
   }
 }

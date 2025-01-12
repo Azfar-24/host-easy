@@ -1,0 +1,52 @@
+{
+  "capturedCelebrationsSection": {
+    "section_heading": "Captured Celebrations: Watch Our Clients Shine!",
+    "description": [
+      {
+        "caption": "Dive into the fun and excitement of our events through real customer experiences!"
+      }
+    ],
+    "data": [
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      }
+    ]
+  }
+}

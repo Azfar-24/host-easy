@@ -3,34 +3,34 @@ export const routes = {
     id: '1',
     name: 'Home',
     path: '/',
-    transKey: 'navigationTabHome',
+    transKey: false,
     authRequired: false,
-    hideMenu: false,
+    hideMenu: true,
     clickable: true
   },
   services: {
     id: '2',
     name: 'Services',
     path: '/services',
-    transKey: 'navigationTabServices',
+    transKey: false,
     authRequired: false,
     hideMenu: false,
-    clickable: false
+    clickable: true
   },
   events: {
     id: '3',
     name: 'Events',
     path: '/events',
-    transKey: 'navigationTabEvents',
+    transKey: false,
     authRequired: false,
     hideMenu: false,
-    clickable: false
+    clickable: true
   },
   aboutUs: {
     id: '4',
     name: 'About Us',
     path: '/about-us',
-    transKey: 'navigationTabAboutUs',
+    transKey: false,
     authRequired: false,
     hideMenu: false,
     clickable: true
@@ -39,9 +39,9 @@ export const routes = {
     id: '5',
     name: 'FAQ',
     path: '/faq',
-    transKey: 'navigationTabFaq',
+    transKey: false,
     authRequired: false,
-    hideMenu: false,
+    hideMenu: true,
     clickable: true
   },
 
@@ -49,16 +49,34 @@ export const routes = {
     id: '6',
     name: 'Privacy Policy',
     path: '/privacy-policy',
-    transKey: 'navigationTabPrivacyPolicy',
+    transKey: false,
     authRequired: false,
-    hideMenu: false,
+    hideMenu: true,
     clickable: true
   },
   tnc: {
     id: '7',
     name: 'Terms & Conditions',
     path: '/tnc',
-    transKey: 'navigationTabTnc',
+    transKey: false,
+    authRequired: false,
+    hideMenu: true,
+    clickable: true
+  },
+  contactUs: {
+    id: '8',
+    name: 'Contact Us',
+    path: '/contact-us',
+    transKey: false,
+    authRequired: false,
+    hideMenu: true,
+    clickable: true
+  },
+  contactUs: {
+    id: '9',
+    name: 'Apply as a Helper',
+    path: '/apply-as-a-helper',
+    transKey: false,
     authRequired: false,
     hideMenu: false,
     clickable: true

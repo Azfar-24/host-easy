@@ -38,7 +38,7 @@
       align-items: center;
       @extend %flexbox !optional;
       &::after {
-        font-family: 'afci' !important;
+        font-family: 'he-icon' !important;
         justify-content: center;
         align-items: center;
         @extend %flexbox !optional;
@@ -84,7 +84,7 @@
   &--search,
   &--edit {
     &::after {
-      font-family: 'afci' !important;
+      font-family: 'he-icon' !important;
       aspect-ratio: 1/1;
       height: 100%;
       position: absolute;

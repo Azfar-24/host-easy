@@ -113,6 +113,11 @@ html {
       // background-color: yellow;
     }
 
+    &--capturedCelebration {
+      overflow: hidden;
+      max-width: none !important;
+    }
+
     &--fluid {
       width: 100%;
     }

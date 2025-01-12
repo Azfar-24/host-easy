@@ -10,7 +10,7 @@ const ServicesSection = () => {
   return (
     <>
       <SectionWrap
-        heading={{ heading: serviceSection.title }}
+        heading={{ heading: serviceSection.section_heading }}
         caption={{
           data: [
             serviceSection.description[0].caption,

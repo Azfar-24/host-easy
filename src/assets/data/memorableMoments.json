@@ -1,0 +1,28 @@
+{
+  "memorableMomentsSection": {
+    "section_heading": "Memorable Moments: A Glimpse into Our Events",
+    "description": [
+      {
+        "caption": "Explore our gallery to see how we bring celebrations to life, one event at a time!"
+      }
+    ],
+    "data": [
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      },
+      {
+        "mediaType": "VIDEO",
+        "url": "images/celebration-media/vid1.mp4"
+      },
+      {
+        "mediaType": "IMAGE",
+        "url": "images/celebration-media/img1.jpg"
+      }
+    ]
+  }
+}

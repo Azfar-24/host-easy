@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'he-icon';
+  src:  url('fonts/he-icon.eot?grc5to');
+  src:  url('fonts/he-icon.eot?grc5to#iefix') format('embedded-opentype'),
+    url('fonts/he-icon.ttf?grc5to') format('truetype'),
+    url('fonts/he-icon.woff?grc5to') format('woff'),
+    url('fonts/he-icon.svg?grc5to#he-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="he1-"], [class*=" he1-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'he-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.he1-wallet:before {
+  content: "\e900";
+}
+.he1-plus:before {
+  content: "\e901";
+}
+.he1-arrow_outward:before {
+  content: "\e902";
+}
+.he1-celebration:before {
+  content: "\e903";
+}
+.he1-tick:before {
+  content: "\e904";
+}
+.he1-chevron_right:before {
+  content: "\e905";
+}
+.he1-chevron_left:before {
+  content: "\e909";
+}
+.he1-chevron_up:before {
+  content: "\e90a";
+}
+.he1-chevron_down:before {
+  content: "\e90f";
+}
+.he1-close:before {
+  content: "\e906";
+}
+.he1-delete:before {
+  content: "\e907";
+}
+.he1-arrow_right:before {
+  content: "\e908";
+}
+.he1-arrow_left:before {
+  content: "\e911";
+}
+.he1-arrow_up:before {
+  content: "\e913";
+}
+.he1-arrow_down:before {
+  content: "\e914";
+}
+.he1-info:before {
+  content: "\e90b";
+}
+.he1-location:before {
+  content: "\e90c";
+}
+.he1-hamburger:before {
+  content: "\e90d";
+}
+.he1-minus:before {
+  content: "\e90e";
+}
+.he1-star_fill:before {
+  content: "\e910";
+}
+.he1-verified_user:before {
+  content: "\e912";
+}

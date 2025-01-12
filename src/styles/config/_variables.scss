@@ -41,8 +41,7 @@ $client-header: setUnit(80);
   --select-box-icon: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACZSURBVHgB7Y0xCgIxEEUnKxHcGBIkgTQucwSv4Em8ikfwCHqS2Fp6ArfcchYhTYqYgEUKFfvdB8PMfObPB5j5yqJerO0eQigKYbzXutYOpdx4Ida3EJ5D0Zr6ICW45HbODw61ifOlL3OMvP+YmJOubasYY3CSUo2cr4a3iWJs9kQ9wS+M6Y45NZUyZuu1Rg3/4hyitbiDCfMCHFoncsdK4HgAAAAASUVORK5CYII=');
 
   // Images/Patterns
-  // --herobanner-bg: url(../assets/images/herobanner/herobanner-bg.jpg?v=#{$image-version}) no-repeat
-  //   center center/cover;
+  --quoates-bg: url(http://127.0.0.1:5500/images/quotes.svg?v=#{$image-version}) no-repeat top left;
 }
 
 // mobile ex-small

@@ -1,6 +1,7 @@
 import SectionWrap from 'components/sectionWrap';
 import Media from 'components/ui/media';
 import Typo from 'components/ui/typo';
+import { text } from 'figlet';
 import React from 'react';
 
 var eventExpertiseJSON = require('../../assets/data/yourEventOurExpertiseSection.json');

@@ -23,11 +23,11 @@ const siteMapArr = [
   },
   {
     title: 'Apply as a Helper',
-    url: '/'
+    url: '/apply-as-a-helper'
   },
   {
     title: 'Contact Us',
-    url: '/'
+    url: '/contact-us'
   }
 ];
 
@@ -95,7 +95,7 @@ const Footer = () => {
                 </div>
                 <div className='copyright__grid-rhs'>
                   <div className='copyright__links'>
-                    <CustomLink redirectionURL={'/'}>FAQs</CustomLink>
+                    <CustomLink redirectionURL={'/faq'}>FAQs</CustomLink>
                     <CustomLink redirectionURL={'/privacy-policy'}>Privacy Policy</CustomLink>
                     <CustomLink redirectionURL={'/tnc'}>Terms and Conditions</CustomLink>
                   </div>
