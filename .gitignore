@@ -1,3 +1,12 @@
 node_modules/
 dist/
 build/
+.DS_Store
+build-tools/.DS_Store
+public/.DS_Store
+public/images/.DS_Store
+src/.DS_Store
+src/assets/.DS_Store
+src/components/.DS_Store
+src/pages/.DS_Store
+src/styles/.DS_Store
