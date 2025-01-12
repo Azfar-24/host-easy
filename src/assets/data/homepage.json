@@ -1,8 +1,64 @@
 {
   "heroSection": {
     "title": "Your Go-To Event Helpers in Dallas & Raleigh!",
-    "description": "With Host Easy, enjoy professional HostHands and Bartenders who take care of everything. Focus on your guests while we handle the rest!",
+    "description": [
+      {
+        "caption": "With Host Easy, enjoy professional HostHands and Bartenders who take care of everything. Focus on your guests while we handle the rest!"
+      }
+    ],
     "thumbnail": "images/banners/hp-herobanner.png",
     "cta": true
+  },
+  "exceptionalEventSupportSection": {
+    "section_heading": "Connecting You to Exceptional Event Support",
+    "description": [
+      {
+        "caption": "Just three steps to find your perfect Host-Hand: Fill out a form, get matched, and meet your helper!"
+      }
+    ],
+    "data": [
+      {
+        "title": "Fill & Submit",
+        "description": "Fill out a short questionnaire to get an estimate",
+        "isCta": true,
+        "url": "/event-support"
+      },
+      {
+        "title": "Connect",
+        "description": "Get connected with the perfect party helper based on your event needs"
+      },
+      {
+        "title": "Meet",
+        "description": "Meet the Host-Hand at your event ",
+        "hint": "Hint: They’re the ones in those awesome Host Easy aprons"
+      }
+    ]
+  },
+  "statsTrackerSection": {
+    "data": [
+      {
+        "value": "98",
+        "slug": "%",
+        "title": "Happy Customers",
+        "caption": "98% of our clients would recommend us to their friends."
+      },
+      {
+        "value": "50",
+        "slug": "+",
+        "title": "Skilled Professionals",
+        "caption": "A team of 50+ skilled bartenders and event helpers."
+      },
+      {
+        "value": "4.9",
+        "slug": "/5",
+        "title": "Ratings",
+        "caption": "Rated 4.9/5 by our clients for professionalism and reliability."
+      },
+      {
+        "value": "1000",
+        "title": "Memorable Events",
+        "caption": "Helping create 1,000+ unforgettable event experiences."
+      }
+    ]
   }
 }

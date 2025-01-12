@@ -26,6 +26,9 @@
 
     &-rhs {
       flex-shrink: 0;
+      justify-content: flex-end;
+      align-items: center;
+      @extend %flexbox !optional;
     }
   }
 

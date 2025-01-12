@@ -1,9 +1,17 @@
 import BookNowBtn from 'components/bookNowBtn';
+import SectionCaption from 'components/sectionCaption';
+import SectionHeading from 'components/sectionHeading';
 import Media from 'components/ui/media';
-import Typo from 'components/ui/typo';
 import React from 'react';
 
-const HeroBanner = ({ title, caption, children, thumbnailConfig }) => {
+const HeroBanner = ({
+  isSectionHeading,
+  title,
+  caption,
+  children,
+  cta = true,
+  thumbnailConfig
+}) => {
   return (
     <>
       <div className='main__container--fluid'>
@@ -11,15 +19,17 @@ const HeroBanner = ({ title, caption, children, thumbnailConfig }) => {
           <div className='main__container'>
             <div className='heroBanner__grid'>
               <div className='heroBanner__grid-lhs'>
-                <Typo component={'h2'} className='heroBanner__title'>
-                  {title}
-                </Typo>
-                <Typo component={'p'} className='heroBanner__caption'>
-                  {caption}
-                </Typo>
-                <div className='heroBanner__cta'>
-                  {children ? children : <BookNowBtn isLightLink={true} />}
-                </div>
+                <SectionHeading
+                  heading={title}
+                  textAlign={'left'}
+                  classes={`${isSectionHeading ? 'section__heading' : 'heroBanner__title'}`}
+                />
+                <SectionCaption data={caption} textAlign={'left'} classes={'heroBanner__caption'} />
+                {cta && (
+                  <div className='heroBanner__cta'>
+                    {children ? children : <BookNowBtn isLightLink={true} />}
+                  </div>
+                )}
               </div>
               <div className='heroBanner__grid-rhs'>
                 <div className='heroBanner__thumbnail'>

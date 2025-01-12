@@ -9,14 +9,18 @@ const captionProps = cva('section__caption', {
       right: 'text-right',
       left: 'text-left',
       center: 'text-center'
+    },
+    textTheme: {
+      dark: 'text-dark',
+      light: 'text-light'
     }
   }
 });
 
-const SectionCaption = ({ data, textAlign = 'center', classes }) => {
+const SectionCaption = ({ data, textTheme, textAlign = 'center', classes }) => {
   return (
     <>
-      <div className={clsx(captionProps({ textAlign }), classes)}>
+      <div className={clsx(captionProps({ textAlign, textTheme }), classes)}>
         {data.map((item, index) => (
           <Typo key={index} component={'p'}>
             {item}

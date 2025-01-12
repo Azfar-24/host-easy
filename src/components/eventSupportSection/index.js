@@ -3,10 +3,7 @@ import CustomLink from 'components/ui/customLink';
 import Typo from 'components/ui/typo';
 import React from 'react';
 
-var exceptionalEventSupportJSON = require('../../assets/data/exceptional_event_support.json');
-const { exceptionalEventSupportSection } = exceptionalEventSupportJSON;
-
-const EventSupportSection = () => {
+const EventSupportSection = ({ exceptionalEventSupportSection }) => {
   return (
     <>
       <SectionWrapGrid

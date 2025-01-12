@@ -310,8 +310,6 @@ html {
   @include matchTag(var(--accent-warning), var(--neutral-2));
 }
 
-
-
 .gridbox {
   @extend %gridbox !optional;
 }
@@ -319,6 +317,10 @@ html {
 .flexbox {
   align-items: center;
   @extend %flexbox !optional;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .space16 {
@@ -341,6 +343,17 @@ html {
   text-align: center;
 }
 
+.text-dark {
+  color: hsla(0, 0%, 12%, 1);
+}
+
+.text-light {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.text-primary {
+  color: hsla(11, 99%, 61%, 1);
+}
 
 .sectionWrapper {
   padding-top: calc(var(--gutter-space) * 12);

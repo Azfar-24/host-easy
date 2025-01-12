@@ -420,3 +420,119 @@
     }
   }
 }
+
+.getStarted {
+  &__wrap {
+    overflow: hidden;
+    background: var(--getstarted-bg);
+    backdrop-filter: blur(14px);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      pointer-events: none;
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: hsla(0, 0%, 12%, 0.8);
+      backdrop-filter: blur(4px);
+    }
+
+    .section__caption {
+      gap: calc(var(--gutter-space) * 4);
+      @extend %gridbox !optional;
+    }
+
+    .sectionWrapperGrid {
+      gap: calc(var(--gutter-space) * 6);
+      justify-content: space-between;
+      align-items: flex-start;
+      @extend %flexbox !optional;
+
+      &__lhs,
+      &__rhs {
+        flex-grow: 1;
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  &__cta {
+    justify-content: flex-end;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+  }
+}
+
+.event {
+  &__list {}
+
+  &__grid {
+    gap: calc(var(--gutter-space) * 6);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: calc(var(--gutter-space) * 10);
+    @extend %gridbox !optional;
+  }
+
+  &__card {
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+  }
+
+  &__thumb {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3/2;
+    @extend %borRad16 !optional;
+
+    img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__dtls {
+    gap: calc(var(--gutter-space) * 1);
+    @extend %gridbox !optional;
+  }
+
+  &__title {
+    color: hsla(0, 0%, 12%, 1);
+    @extend %mediumFF !optional;
+    @include setProperty(font-size, 26);
+  }
+
+  &__caption {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: hsla(0, 0%, 12%, 1);
+    @extend %lightFF !optional;
+    @include setProperty(font-size, 16);
+  }
+
+  &__cta {
+    gap: calc(var(--gutter-space) * 2);
+    justify-content: flex-start;
+    align-items: flex-start;
+    @extend %flexbox !optional;
+  }
+}
+
+.wantToJoinTheParty {
+  &__wrap {
+    .section__caption {
+      gap: calc(var(--gutter-space) * 4);
+      @extend %gridbox !optional;
+    }
+  }
+}

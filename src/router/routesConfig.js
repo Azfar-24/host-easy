@@ -72,7 +72,7 @@ export const routes = {
     hideMenu: true,
     clickable: true
   },
-  contactUs: {
+  applyAsHelper: {
     id: '9',
     name: 'Apply as a Helper',
     path: '/apply-as-a-helper',

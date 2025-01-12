@@ -10,6 +10,7 @@ import TnC from 'pages/tnc';
 import PrivacyPolicy from 'pages/privacyPolicy';
 import ServiceDetails from 'pages/serviceDetails';
 import EventDetails from 'pages/eventDetails';
+import Helper from 'pages/helper';
 
 const AppLayout = lazy(() => import(/* webpackChunkName: "AppLayout" */ '../components/applayout'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ 'pages/Home'));
@@ -39,6 +40,10 @@ const childRoutes = [
   {
     path: routes.privacyPolicy.path,
     element: <PrivacyPolicy />
+  },
+  {
+    path: routes.applyAsHelper.path,
+    element: <Helper />
   },
   {
     path: routes.tnc.path,

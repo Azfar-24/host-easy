@@ -1,8 +1,8 @@
-$font-detail: ('FigtreeLight': initial,
-  'FigtreeRegular': initial,
-  'FigtreeMedium': initial,
-  'FigtreeBold': initial,
-  'FigtreeBlack': initial,
+$font-detail: ('FigtreeLight': 300,
+  'FigtreeRegular': 400,
+  'FigtreeMedium': 500,
+  'FigtreeBold': 700,
+  'FigtreeBlack': 900,
 );
 
 @each $font-name,

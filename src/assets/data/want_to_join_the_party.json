@@ -1,0 +1,17 @@
+{
+  "wantToJoinThePartySection": {
+    "title": "Want to join the party?",
+    "description": [
+      {
+        "caption": "<b class='text-primary'>Fill out our questionnaire to join our team.</b>"
+      },
+      {
+        "caption": "Do you love mixing drinks for your friends? Maybe you enjoy the satisfaction of tidying up a space? Want to spend time in celebratory environments?"
+      },
+      {
+        "caption": "You can do all of these things and get paid by being a party helper with Host Easy!"
+      }
+    ],
+    "thumbnail": "images/banners/apply-as-a-helper-thumbnail.png"
+  }
+}

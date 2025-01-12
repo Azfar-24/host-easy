@@ -1,0 +1,13 @@
+{
+  "getStartedSection": {
+    "section_heading": "Ready to get started?",
+    "description": [
+      {
+        "caption": "<b>Fill out our form to get a quote today!</b>"
+      },
+      {
+        "caption": "Our party helpers are background checked and are eager to assist you at your event. Want to know more? Check out our <a href='/faq' class='linkDark'>frequently asked questions.</a>"
+      }
+    ]
+  }
+}

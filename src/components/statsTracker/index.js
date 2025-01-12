@@ -1,10 +1,7 @@
 import StatsTrackerCard from 'components/statsTrackerCard';
 import React from 'react';
 
-var statsTrackerJSON = require('../../assets/data/statsTrackingRecord.json');
-const { statsTrackerSection } = statsTrackerJSON;
-
-const StatsTracker = ({ data }) => {
+const StatsTracker = ({ statsTrackerSection }) => {
   return (
     <>
       <section className='main__container--fluid'>

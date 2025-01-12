@@ -9,14 +9,18 @@ const headingProps = cva('section__heading', {
       right: 'text-right',
       left: 'text-left',
       center: 'text-center'
+    },
+    textTheme: {
+      dark: 'text-dark',
+      light: 'text-light'
     }
   }
 });
 
-const SectionHeading = ({ textAlign = 'center', classes, heading }) => {
+const SectionHeading = ({ textAlign = 'center', textTheme, classes, heading }) => {
   return (
     <>
-      <Typo component={'h2'} className={clsx(headingProps({ textAlign }), classes)}>
+      <Typo component={'h2'} className={clsx(headingProps({ textAlign, textTheme }), classes)}>
         {heading}
       </Typo>
     </>
