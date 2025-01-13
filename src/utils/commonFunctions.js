@@ -11,12 +11,12 @@ export const getTranslations = (key, defaultValue) => {
 
 export const getToken = async () => {
   try {
-    let token = await  window?.getAuthInfo()
-    return token?.idToken
+    let token = await window?.getAuthInfo();
+    return token?.idToken;
   } catch (error) {
-    console.log("err", error)
+    console.log('err', error);
   }
-}
+};
 
 /* 
     Replaces the placeholders in the given string with the values from the given object.
@@ -73,13 +73,13 @@ export const serialize = (data) => {
 };
 
 export const setCookie = (name, value, days) => {
-  let expires = "";
+  let expires = '';
   if (days) {
     const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = '; expires=' + date.toUTCString();
   }
-  document.cookie = `${name}=${value || ""}${expires}; path=/`;
+  document.cookie = `${name}=${value || ''}${expires}; path=/`;
 };
 
 export const getCookie = (name) => {
@@ -103,4 +103,15 @@ export const formatDate = (date) => {
   };
   const formattedDate = dateObj?.toLocaleDateString('en-GB', options);
   return formattedDate?.toUpperCase();
+};
+
+export const chunkArray = (array, numChunks) => {
+  const chunkSize = Math.ceil(array.length / numChunks);
+  return Array.from({ length: numChunks }, (_, index) =>
+    array.slice(index * chunkSize, index * chunkSize + chunkSize)
+  );
+};
+
+export const formatToRouteString = (input) => {
+  return input.toLowerCase().replace(/\s+/g, '-');
 };

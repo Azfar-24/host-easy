@@ -11,6 +11,7 @@ import PrivacyPolicy from 'pages/privacyPolicy';
 import ServiceDetails from 'pages/serviceDetails';
 import EventDetails from 'pages/eventDetails';
 import Helper from 'pages/helper';
+import Events from 'pages/events';
 
 const AppLayout = lazy(() => import(/* webpackChunkName: "AppLayout" */ '../components/applayout'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ 'pages/Home'));
@@ -25,8 +26,9 @@ const childRoutes = [
     element: <ServiceDetails />
   },
   {
-    path: `${routes.events.path}/:eventId`,
-    element: <EventDetails />
+    path: routes.events.path,
+    element: <Events />,
+    children: [{ path: ':eventId', element: <EventDetails /> }]
   },
 
   {

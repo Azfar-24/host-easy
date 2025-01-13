@@ -1,9 +1,13 @@
 import SectionWrap from 'components/sectionWrap';
 import Media from 'components/ui/media';
 import React from 'react';
+import { chunkArray } from 'utils/commonFunctions';
 var memorableMomentsJSON = require('../../assets/data/memorableMoments.json');
 const { memorableMomentsSection } = memorableMomentsJSON;
+
 const MemorableMoments = () => {
+  const memorableMoments = chunkArray(memorableMomentsSection.data, 4);
+
   return (
     <>
       <SectionWrap
@@ -15,19 +19,15 @@ const MemorableMoments = () => {
         <div className='section__container'>
           <div className='ourEventMoment__wrap'>
             <div className='ourEventMoment__grid'>
-              {Array.from({ length: 4 }).map((_, index) => {
-                return (
-                  <div key={index} className='ourEventMoment__grid-item'>
-                    {memorableMomentsSection.data.map((item, index) => {
-                      return (
-                        <div className='ourEventMoment__thumb' key={index}>
-                          <Media mediaType={item.mediaType} imgSrc={item.url} />
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
+              {memorableMoments.map((chunk, chunkIndex) => (
+                <div key={chunkIndex} className='ourEventMoment__grid-item'>
+                  {chunk.map((item, itemIndex) => (
+                    <div className='ourEventMoment__thumb' key={itemIndex}>
+                      <Media mediaType={item.mediaType} imgSrc={item.url} />
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

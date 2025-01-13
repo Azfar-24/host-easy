@@ -51,7 +51,7 @@ const config = (env) => {
               comments: false
             },
             compress: {
-              drop_console: false
+              drop_console: true
             }
           },
           extractComments: false
