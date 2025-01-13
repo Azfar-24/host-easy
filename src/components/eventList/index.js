@@ -2,9 +2,7 @@ import CustomLink from 'components/ui/customLink';
 import Media from 'components/ui/media';
 import Typo from 'components/ui/typo';
 import React from 'react';
-
-var eventListJSON = require('../../assets/data/events_list.json');
-const { eventList } = eventListJSON;
+import { formatToRouteString } from 'utils/commonFunctions';
 
 const EventList = ({ data }) => {
   return (
@@ -26,7 +24,10 @@ const EventList = ({ data }) => {
               </div>
               {item.url && (
                 <div className='event__cta'>
-                  <CustomLink redirectionURL={item.url} variant={'primaryDarkLink'}>
+                  <CustomLink
+                    redirectionURL={`events/${formatToRouteString(item.title)}`}
+                    variant={'primaryDarkLink'}
+                  >
                     Learn More <i className='he1-arrow_outward'></i>
                   </CustomLink>
                 </div>
