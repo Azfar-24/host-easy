@@ -1,0 +1,147 @@
+{
+  "heroSection": {
+    "title": "About Us",
+    "description": [
+      {
+        "caption": "At Host Easy, we’re passionate about transforming events into unforgettable experiences. From skilled bartenders to reliable event helpers, we handle the details so you can focus on enjoying the moment."
+      },
+      {
+        "caption": "Our mission is simple: to make hosting stress-free, seamless, and full of joy."
+      }
+    ],
+    "thumbnail": "images/banners/hp-herobanner.png",
+    "cta": false
+  },
+  "statsTrackerSection": {
+    "data": [
+      {
+        "value": "500",
+        "slug": "",
+        "title": "Events Served",
+        "caption": "Over 500 successful events supported to date."
+      },
+      {
+        "value": "98",
+        "slug": "%",
+        "title": "Happy Customers",
+        "caption": "98% of our clients would recommend us to their friends."
+      },
+      {
+        "value": "5",
+        "slug": "+",
+        "title": "Years of Experience",
+        "caption": "Delivering seamless event services for over 5 years."
+      },
+      {
+        "value": "50",
+        "slug": "+",
+        "title": "Skilled Professionals",
+        "caption": "A team of 50+ skilled bartenders and event helpers."
+      }
+    ]
+  },
+  "ourStorySection": {
+    "section_heading": "Our Story",
+    "data": [
+      {
+        "thumbnail": "images/our-story/os1.jpg",
+        "description": "The idea for Host Easy came to life at a pool party in Dallas, TX. Our founder was supposed to be relaxing and having fun, but instead, they found themselves running around, grabbing snacks, fetching towels, and managing every little detail—missing out on all the enjoyment. That's when it clicked: hosting a party shouldn’t mean sacrificing your own good time."
+      },
+      {
+        "thumbnail": "images/our-story/os1.jpg",
+        "description": "At Host Easy, we believe the host should be the life of the party, not the one stuck refilling drinks or hunting down extra chairs. We've all been there—trying to enjoy a fun gathering while juggling endless tasks. It's tough to be part of the action when you're busy making sure everything’s just right."
+      },
+      {
+        "thumbnail": "images/our-story/os1.jpg",
+        "description": "And so, Host Easy was born. Our mission is simple: we take care of all the details so you can actually enjoy your own event. Whether it’s setting up, keeping things flowing, or cleaning up afterward, we’ve got it covered. You get to relax, have fun, and make memories with your guests without the stress. From intimate gatherings to kids' birthday parties, we're the team in the orange polos, hustling behind the scenes so you don’t have to."
+      },
+      {
+        "description": "<b>With Host Easy, you don’t just throw a party, you get to be part of it.</b>"
+      }
+    ]
+  },
+  "whyChooseUsSection": {
+    "section_heading": "Why Choose Us?",
+    "data": [
+      {
+        "thumbnail": "images/svgs/seamless-experience.svg",
+        "title": "Seamless Experience",
+        "description": "From arrival to cleanup, we handle everything, so you can relax and enjoy your event."
+      },
+      {
+        "thumbnail": "images/svgs/skilled-professionals.svg",
+        "title": "Skilled Professionals",
+        "description": "Experienced bartenders and helpers who know how to keep your guests engaged and your event running smoothly."
+      },
+      {
+        "thumbnail": "images/svgs/customizable-services.svg",
+        "title": "Customizable Services",
+        "description": "Tailored to fit any event, no matter the scale or theme, ensuring it’s exactly what you envision."
+      },
+      {
+        "thumbnail": "images/svgs/attention-detail.svg",
+        "title": "Attention to Detail",
+        "description": "We don’t just show up—we anticipate your needs, ensuring every detail is handled to perfection."
+      },
+      {
+        "thumbnail": "images/svgs/flexible-booking-options.svg",
+        "title": "Flexible Booking Options",
+        "description": "Need us for a few hours or the entire day? Our services are designed to fit your schedule and preferences."
+      },
+      {
+        "thumbnail": "images/svgs/commitment-to-excellence.svg",
+        "title": "Commitment to Excellence",
+        "description": "We’re passionate about making every event memorable, bringing energy, professionalism, and dedication to every occasion."
+      }
+    ]
+  },
+  "meetOurTeamSection": {
+    "section_heading": "Meet the Team",
+    "data": [
+      {
+        "thumbnail": "images/our-team/grant-rowe.jpg",
+        "title": "Grant Rowe",
+        "designation": "CEO",
+        "url": "/"
+      },
+      {
+        "thumbnail": "images/our-team/grant-rowe.jpg",
+        "title": "Grant Rowe",
+        "designation": "CEO",
+        "url": "/"
+      },
+      {
+        "thumbnail": "images/our-team/grant-rowe.jpg",
+        "title": "Grant Rowe",
+        "designation": "CEO",
+        "url": "/"
+      },
+      {
+        "thumbnail": "images/our-team/grant-rowe.jpg",
+        "title": "Grant Rowe",
+        "designation": "CEO",
+        "url": "/"
+      }
+    ]
+  },
+  "ourValuesSection": {
+    "section_heading": "Our Values",
+    "data": [
+      {
+        "thumbnail": "images/svgs/inclusivity.svg",
+        "title": "Inclusivity",
+        "description": "Respecting and accommodating diverse cultural and individual needs."
+      },
+      {
+        "thumbnail": "images/svgs/memorability.svg",
+        "title": "Memorability",
+        "description": "Leaving a lasting impression through exceptional service."
+      },
+      {
+        "thumbnail": "images/svgs/professionalism.svg",
+        "title": "Professionalism",
+        "description": "Delivering reliable, polished, and high-quality service."
+      }
+    ]
+  }
+}

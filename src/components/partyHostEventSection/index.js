@@ -23,7 +23,7 @@ const PartyHostEventSection = () => {
           textAlign: 'left'
         }}
       >
-        <EventList data={eventList.data.slice(0, 3)} />
+        <EventList data={eventList.data.slice(0, 3)} redirectUrl={true}  />
         <div className='flexbox justify-center'>
           <CustomLink variant={'primaryLight'} redirectionURL={'/events'}>
             View all Events

@@ -1,7 +1,7 @@
-@use '../config/variables'as *;
-@use '../config/variables-en'as *;
-@use '../config/mixins'as *;
-@use '../config/extend'as *;
+@use '../config/variables' as *;
+@use '../config/variables-en' as *;
+@use '../config/mixins' as *;
+@use '../config/extend' as *;
 
 * {
   margin: 0;
@@ -58,7 +58,6 @@ html {
 }
 
 .main {
-
   position: relative;
   line-height: normal;
   overflow-x: hidden;
@@ -80,7 +79,8 @@ html {
   // user-select: none;
   backface-visibility: hidden;
   font-variant-ligatures: no-common-ligatures;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
   gap: calc(var(--gutter-space) * 2);
   @extend %gridbox !optional;
   @include animation('opacity .3s linear');
@@ -123,7 +123,8 @@ html {
     }
   }
 
-  &__row {}
+  &__row {
+  }
 
   i {
     color: unset;
@@ -207,7 +208,6 @@ html {
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-
     select:focus,
     textarea:focus,
     input:focus {
@@ -216,7 +216,8 @@ html {
 
     input:focus,
     textarea:focus {
-      @include placeholder {}
+      @include placeholder {
+      }
     }
   }
 

@@ -4,7 +4,7 @@ import Typo from 'components/ui/typo';
 import React from 'react';
 import { formatToRouteString } from 'utils/commonFunctions';
 
-const EventList = ({ data }) => {
+const EventList = ({ data ,redirectUrl}) => {
   return (
     <>
       <div className='event__list'>
@@ -25,7 +25,11 @@ const EventList = ({ data }) => {
               {item.url && (
                 <div className='event__cta'>
                   <CustomLink
-                    redirectionURL={`events/${formatToRouteString(item.title)}`}
+                    redirectionURL={
+                      redirectUrl
+                        ? `events/${formatToRouteString(item.title)}`
+                        : formatToRouteString(item.title)
+                    }
                     variant={'primaryDarkLink'}
                   >
                     Learn More <i className='he1-arrow_outward'></i>

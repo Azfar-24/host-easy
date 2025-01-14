@@ -1,6 +1,7 @@
 import BookNowBtn from 'components/bookNowBtn';
 import SectionCaption from 'components/sectionCaption';
 import SectionHeading from 'components/sectionHeading';
+import SectionWrap from 'components/sectionWrap';
 import Media from 'components/ui/media';
 import React from 'react';
 
@@ -16,7 +17,7 @@ const HeroBanner = ({
     <>
       <div className='main__container--fluid'>
         <div className='heroBanner__wrap'>
-          <div className='main__container'>
+          <SectionWrap>
             <div className='heroBanner__grid'>
               <div className='heroBanner__grid-lhs'>
                 <SectionHeading
@@ -37,7 +38,7 @@ const HeroBanner = ({
                 </div>
               </div>
             </div>
-          </div>
+          </SectionWrap>
         </div>
       </div>
     </>

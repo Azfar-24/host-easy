@@ -4,9 +4,7 @@ import Typo from 'components/ui/typo';
 import { text } from 'figlet';
 import React from 'react';
 
-var eventExpertiseJSON = require('../../assets/data/yourEventOurExpertiseSection.json');
-const { yourEventOurExpertiseSection } = eventExpertiseJSON;
-const YourEventOurExpertiseSection = () => {
+const YourEventOurExpertiseSection = ({ yourEventOurExpertiseSection }) => {
   return (
     <>
       <SectionWrap heading={{ heading: yourEventOurExpertiseSection.section_heading }}>

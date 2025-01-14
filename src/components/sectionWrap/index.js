@@ -7,12 +7,14 @@ const SectionWrap = ({ heading, caption, customCls, childCustomCls, children }) 
     <>
       <section className='main__container--fluid'>
         <div className={`sectionWrapper ${customCls ? customCls : ''}`}>
-          <div className='main__container'>
-            <div className='sectionWrapper__head'>
-              {heading && <SectionHeading {...heading} />}
-              {caption && <SectionCaption {...caption} />}
+          {(heading || caption) && (
+            <div className='main__container'>
+              <div className='sectionWrapper__head'>
+                {heading && <SectionHeading {...heading} />}
+                {caption && <SectionCaption {...caption} />}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className={`main__container ${childCustomCls ? childCustomCls : ''}`}>
             {children}

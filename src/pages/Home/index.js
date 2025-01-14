@@ -12,7 +12,12 @@ import YourEventOurExpertiseSection from 'components/yourEventOurExpertiseSectio
 import React from 'react';
 const Home = () => {
   var homepageJSON = require('../../assets/data/homepage.json');
-  const { heroSection, exceptionalEventSupportSection, statsTrackerSection } = homepageJSON;
+  const {
+    heroSection,
+    exceptionalEventSupportSection,
+    statsTrackerSection,
+    yourEventOurExpertiseSection
+  } = homepageJSON;
   return (
     <>
       <HeroBanner
@@ -22,7 +27,7 @@ const Home = () => {
         cta={heroSection.cta}
       />
       <ServicesSection />
-      <YourEventOurExpertiseSection />
+      <YourEventOurExpertiseSection yourEventOurExpertiseSection={yourEventOurExpertiseSection} />
       <EventSupportSection exceptionalEventSupportSection={exceptionalEventSupportSection} />
       <TestimonialsSection />
       <CapturedCelebrationsSection />

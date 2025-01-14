@@ -1,4 +1,4 @@
-@use '../config'as *;
+@use '../config' as *;
 
 .card {
   gap: calc(var(--gutter-space) * 4);
@@ -38,7 +38,8 @@
     @include setProperty(font-size, 26);
   }
 
-  &__cta {}
+  &__cta {
+  }
 
   &__description {
     color: hsla(0, 0%, 12%, 1);
@@ -48,7 +49,8 @@
 }
 
 .eventExpertise {
-  &__wrap {}
+  &__wrap {
+  }
 
   &__grid {
     margin: 0 auto;
@@ -101,7 +103,6 @@
       @include setProperty(font-size, 16);
     }
   }
-
 }
 
 .eventSupport {
@@ -127,9 +128,11 @@
 }
 
 .timeline {
-  &__wrap {}
+  &__wrap {
+  }
 
-  &__list {}
+  &__list {
+  }
 
   &__box {
     position: relative;
@@ -146,7 +149,7 @@
         position: absolute;
         top: auto;
         bottom: 0;
-        left: calc(32px /2);
+        left: calc(32px / 2);
         width: 1px;
         height: 100%;
         background: hsla(11, 99%, 61%, 1);
@@ -203,7 +206,8 @@
 }
 
 .testify {
-  &__wrap {}
+  &__wrap {
+  }
 
   &__swiper {
     overflow: hidden;
@@ -233,7 +237,7 @@
           }
 
           &-author {
-            color: hsla(0, 0%, 100%, .7);
+            color: hsla(0, 0%, 100%, 0.7);
           }
         }
       }
@@ -248,10 +252,12 @@
     align-items: center;
     @extend %flexbox !optional;
     @extend %borRad16 !optional;
-    @include transition(opacity 0.1s linear,
+    @include transition(
+      opacity 0.1s linear,
       height 0.2s linear,
       background-color 0.1s linear,
-      color 0.1s linear);
+      color 0.1s linear
+    );
 
     &::after {
       content: '';
@@ -322,7 +328,8 @@
 }
 
 .stats {
-  &__wrap {}
+  &__wrap {
+  }
 
   &__grid {
     gap: calc(var(--gutter-space) * 6);
@@ -332,8 +339,7 @@
   }
 
   &__card {
-
-    max-width: calc(100% /4);
+    max-width: calc(100% / 4);
     width: 100%;
     flex-basis: 100%;
     flex-grow: 1;
@@ -369,7 +375,8 @@
 }
 
 .ourEventMoment {
-  &__wrap {}
+  &__wrap {
+  }
 
   &__grid {
     gap: calc(var(--gutter-space) * 6);
@@ -380,7 +387,7 @@
     &-item {
       width: 100%;
       flex-grow: 1;
-      flex-basis: calc(100% /4);
+      flex-basis: calc(100% / 4);
       gap: calc(var(--gutter-space) * 6);
       justify-content: center;
       align-items: center;
@@ -469,7 +476,8 @@
 }
 
 .event {
-  &__list {}
+  &__list {
+  }
 
   &__grid {
     gap: calc(var(--gutter-space) * 6);
@@ -533,6 +541,87 @@
     .section__caption {
       gap: calc(var(--gutter-space) * 4);
       @extend %gridbox !optional;
+    }
+  }
+}
+
+.ourStory {
+  &__wrap {
+  }
+  &__container {
+    column-fill: balance;
+    columns: auto 2;
+    column-gap: calc(var(--gutter-space) * 8);
+    // @extend %gridbox !optional;
+  }
+  &__box {
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+    &:not(:last-of-type) {
+      margin-bottom: calc(var(--gutter-space) * 8);
+    }
+    &-thumb {
+      aspect-ratio: 16/9;
+      img {
+        width: 100%;
+        display: block;
+        aspect-ratio: auto 1;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    &-caption {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 16);
+    }
+  }
+}
+
+.meetOurTeam {
+  &__wrap {
+  }
+  &__container {
+    text-align: center;
+    gap: calc(var(--gutter-space) * 6);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    @extend %gridbox !optional;
+  }
+  &__box {
+    gap: calc(var(--gutter-space) * 4);
+    justify-items: center;
+    @extend %gridbox !optional;
+    &-thumb {
+      @include setProperty(width, 200);
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      @extend %borRad100 !optional;
+
+      img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    &-grid {
+      width: 100%;
+      gap: calc(var(--gutter-space) * 4);
+      flex-direction: column;
+      @extend %flexbox !optional;
+    }
+    &-content {
+    }
+    &-title {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 20);
+    }
+    &-designation {
+      color: hsla(0, 0%, 12%, 1);
+      @extend %regularFF !optional;
+      @include setProperty(font-size, 16);
     }
   }
 }
