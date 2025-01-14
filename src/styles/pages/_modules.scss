@@ -561,7 +561,10 @@
       margin-bottom: calc(var(--gutter-space) * 8);
     }
     &-thumb {
-      aspect-ratio: 16/9;
+      overflow: hidden;
+      width: 100%;
+      background: hsla(240, 8%, 95%, 1);
+      @extend %borRad16 !optional;
       img {
         width: 100%;
         display: block;
@@ -623,5 +626,37 @@
       @extend %regularFF !optional;
       @include setProperty(font-size, 16);
     }
+  }
+}
+
+.whyChooseUs {
+  &__section {
+    .sectionWrapperGrid {
+      gap: calc(var(--gutter-space) * 10);
+      @extend %flexbox !optional;
+    }
+    .sectionWrapper__head {
+      white-space: nowrap;
+    }
+  }
+  &__wrap {
+    .eventExpertise {
+      &__card {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @extend %flexbox !optional;
+
+        &-icon {
+          margin: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  &__container {
+    gap: calc(var(--gutter-space) * 6);
+    grid-template-columns: repeat(2, 1fr);
+    @extend %gridbox !optional;
   }
 }

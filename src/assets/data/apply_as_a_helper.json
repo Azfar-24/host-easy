@@ -1,0 +1,62 @@
+{
+  "heroSection": {
+    "title": "Join the Host Easy Team",
+    "description": [
+      {
+        "caption": "Work on your terms, earn great pay, and help create memorable events."
+      }
+    ],
+    "thumbnail": "images/banners/hp-herobanner.png",
+    "cta": true
+  },
+  "whyJoinUsSection": {
+    "section_heading": "Why Join Us?",
+    "data": [
+      {
+        "thumbnail": "images/svgs/flexible-schedule.svg",
+        "title": "Flexible Schedule",
+        "description": "Work when it fits your life."
+      },
+      {
+        "thumbnail": "images/svgs/competitive-pay.svg",
+        "title": "Competitive Pay",
+        "description": "Earn top rates for your time and skills."
+      },
+      {
+        "thumbnail": "images/svgs/exciting-events.svg",
+        "title": "Exciting Events",
+        "description": "Be part of celebrations, from birthdays to private parties."
+      }
+    ]
+  },
+  "howItWorkSection": {
+    "section_heading": "How It Works",
+    "description": [
+      {
+        "caption": "Joining our team is simple and hassle-free! Follow these three easy steps to kick-start your journey as a Host-Hand or Bartender."
+      }
+    ],
+    "data": [
+      {
+        "title": "Apply Online",
+        "description": "Submit your application through our quick and user-friendly form. Share a bit about yourself, your availability, and why you’re excited to join us.",
+        "isCta": true,
+        "url": "/event-support"
+      },
+      {
+        "title": "Onboarding",
+        "description": "Attend a short onboarding session where we’ll cover the essentials. You’ll learn what’s expected, get a quick overview of the role, and complete any necessary verification."
+      },
+      {
+        "title": "Start Earning",
+        "description": "Once verified, you’re ready to go! Choose gigs that fit your schedule, show up, and start earning while helping hosts create unforgettable events."
+      }
+    ]
+  },
+  "bartenderAtHostEasySection": {
+    "section_heading": "Bartender at Host Easy"
+  },
+  "helperAtHostEasySection": {
+    "section_heading": "Helper at Host Easy"
+  }
+}

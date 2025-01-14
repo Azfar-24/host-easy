@@ -3,6 +3,7 @@ import MeetOurTeam from 'components/meetOurTeam';
 import OurStorySection from 'components/ourStorySection';
 import StatsTracker from 'components/statsTracker';
 import WantToJoinTheParty from 'components/wantToJoinTheParty';
+import WhyChooseUs from 'components/whyChooseUs';
 import YourEventOurExpertiseSection from 'components/yourEventOurExpertiseSection';
 import React from 'react';
 var aboutUsPageJSON = require('../../assets/data/aboutuspage.json');
@@ -27,6 +28,7 @@ const AboutUs = () => {
       <StatsTracker statsTrackerSection={statsTrackerSection} />
       <OurStorySection data={ourStorySection} />
       <YourEventOurExpertiseSection yourEventOurExpertiseSection={ourValuesSection} />
+      <WhyChooseUs data={whyChooseUsSection} />
       <MeetOurTeam data={meetOurTeamSection} />
       <WantToJoinTheParty />
     </>

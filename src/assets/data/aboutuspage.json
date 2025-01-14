@@ -52,11 +52,11 @@
         "description": "At Host Easy, we believe the host should be the life of the party, not the one stuck refilling drinks or hunting down extra chairs. We've all been there—trying to enjoy a fun gathering while juggling endless tasks. It's tough to be part of the action when you're busy making sure everything’s just right."
       },
       {
-        "thumbnail": "images/our-story/os1.jpg",
+        "thumbnail": "images/banners/apply-as-a-helper-thumbnail.png",
         "description": "And so, Host Easy was born. Our mission is simple: we take care of all the details so you can actually enjoy your own event. Whether it’s setting up, keeping things flowing, or cleaning up afterward, we’ve got it covered. You get to relax, have fun, and make memories with your guests without the stress. From intimate gatherings to kids' birthday parties, we're the team in the orange polos, hustling behind the scenes so you don’t have to."
       },
       {
-        "description": "<b>With Host Easy, you don’t just throw a party, you get to be part of it.</b>"
+        "description": "<b class='text-primary'>With Host Easy, you don’t just throw a party, you get to be part of it.</b>"
       }
     ]
   },
