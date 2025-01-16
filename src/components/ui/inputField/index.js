@@ -11,13 +11,16 @@ const InputField = ({
   extraAttri = {},
   hiddenlabel,
   labelConfig,
-  validationConfig
+  validationConfig,
+  registerfuction
 }) => {
   const parentDiv = useRef(null);
 
   function handleBlur(e) {
     onBlur(e);
   }
+
+  const { ref = null, ...rest } = registerfuction ? registerfuction(labelConfig.inputId) : {};
   return (
     <>
       <div
@@ -32,8 +35,9 @@ const InputField = ({
             autoComplete='off'
             type={type}
             onBlur={handleBlur}
-            ref={inputRef}
             {...extraAttri}
+            ref={ref}
+            {...rest}
           />
           <ValidationText {...validationConfig} />
         </div>

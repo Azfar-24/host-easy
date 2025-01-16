@@ -11,13 +11,16 @@ const InputTextarea = ({
   extraAttri = {},
   hiddenlabel,
   labelConfig,
-  validationConfig
+  validationConfig,registerfuction
 }) => {
   const parentDiv = useRef(null);
 
   function handleBlur(e) {
     onBlur(e);
   }
+
+  const { ref = null, ...rest } = registerfuction ? registerfuction(labelConfig.inputId) : {};
+
   return (
     <>
       <div
@@ -31,8 +34,10 @@ const InputTextarea = ({
           <textarea
             autoComplete='off'
             onBlur={handleBlur}
-            ref={inputRef}
+            // ref={inputRef}
             {...extraAttri}
+            ref={ref}
+            {...rest}
           ></textarea>
           <ValidationText {...validationConfig} />
         </div>

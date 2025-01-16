@@ -9,8 +9,34 @@ import SelectField from 'components/ui/selectField';
 import ToastMessage from 'components/ui/toastMessage';
 import ValidationText from 'components/ui/validationText';
 import React from 'react';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 const ContactUs = ({ data }) => {
+  const schema = yup.object({
+    username: yup.string().required('Username is required'),
+    email: yup.string().email('Invalid email address').required('Email is required'),
+    password: yup
+      .string()
+      .min(6, 'Password must be at least 6 characters')
+      .required('Password is required')
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(schema)
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  console.log(errors);
+
   return (
     <>
       <section className='main__container--fluid'>
@@ -30,110 +56,119 @@ const ContactUs = ({ data }) => {
               }}
             >
               <div className='contactUs__form'>
-                <div className='contactUs__form-row'>
-                  <div className='contactUs__form-grid'>
-                    <div className='contactUs__form-item'>
-                      <InputField
-                        labelConfig={{
-                          inputLbl: 'First Name of Host',
-                          inputId: 'fName_host'
-                        }}
-                        handleInput={() => {}}
-                        components={<ValidationText validationText={'error msg'} />}
-                      />
-                    </div>
-                    <div className='contactUs__form-item'>
-                      <InputField
-                        labelConfig={{
-                          inputLbl: 'Last Name of Host',
-                          inputId: 'lName_host'
-                        }}
-                        handleInput={() => {}}
-                        components={false && <ValidationText validationText={'error msg'} />}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='contactUs__form-row'>
-                  <div className='contactUs__form-grid'>
-                    <div className='contactUs__form-item'>
-                      <InputField
-                        labelConfig={{
-                          inputLbl: 'Contact Numbert',
-                          inputId: 'contactNumber_host'
-                        }}
-                        handleInput={() => {}}
-                        components={<ValidationText validationText={'error msg'} />}
-                        extraAttri={{
-                          type: 'tel',
-                          inputmode: 'numeric'
-                        }}
-                      />
-                    </div>
-                    <div className='contactUs__form-item'>
-                      <InputField
-                        labelConfig={{
-                          inputLbl: 'Email ID',
-                          inputId: 'email_id_host'
-                        }}
-                        handleInput={() => {}}
-                        components={<ValidationText validationText={'error msg'} />}
-                        extraAttri={{
-                          type: 'email',
-                          inputmode: 'email'
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='contactUs__form-row'>
-                  <div className='contactUs__form-grid'>
-                    <div className='contactUs__form-item'>
-                      <SelectField
-                        labelConfig={{
-                          inputLbl: 'What service are you looking for?',
-                          inputID: 'numbering_system'
-                        }}
-                        parentExtraCls={'select__native'}
-                        options={[
-                          {
-                            categoryLbl: 'Guest Count',
-                            category: [
-                              {
-                                value: 1,
-                                label: '5 - 10 guests'
-                              },
-                              { value: 2, label: '10 - 20 guests' }
-                            ]
-                          }
-                        ]}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='contactUs__form-row'>
-                  <div className='contactUs__form-grid'>
-                    <div className='contactUs__form-item'>
-                      <InputTextarea
-                        labelConfig={{
-                          inputLbl: 'Message',
-                          inputId: 'message_host'
-                        }}
-                        handleInput={() => {}}
-                        components={<ValidationText validationText={'error msg'} />}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='contactUs__form-row'>
-                  <div className='contactUs__form-grid'>
-                    <div className='contactUs__form-item'>
-                      <div className='contactUs__form-cta'>
-                        <Button variant={'primaryDark'}>Submit</Button>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <div className='contactUs__form-row'>
+                    <div className='contactUs__form-grid'>
+                      <div className='contactUs__form-item'>
+                        <InputField
+                          labelConfig={{
+                            inputLbl: 'First Name of Host',
+                            inputId: 'fName_host'
+                          }}
+                          handleInput={() => {}}
+                          registerfuction={register}
+                          components={<ValidationText validationText={'error msg'} />}
+                        />
+                      </div>
+                      <div className='contactUs__form-item'>
+                        <InputField
+                          labelConfig={{
+                            inputLbl: 'Last Name of Host',
+                            inputId: 'lName_host'
+                          }}
+                          handleInput={() => {}}
+                          registerfuction={register}
+                          components={false && <ValidationText validationText={'error msg'} />}
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div className='contactUs__form-row'>
+                    <div className='contactUs__form-grid'>
+                      <div className='contactUs__form-item'>
+                        <InputField
+                          labelConfig={{
+                            inputLbl: 'Contact Numbert',
+                            inputId: 'contactNumber_host'
+                          }}
+                          handleInput={() => {}}
+                          registerfuction={register}
+                          components={<ValidationText validationText={'error msg'} />}
+                          extraAttri={{
+                            type: 'tel',
+                            inputmode: 'numeric'
+                          }}
+                        />
+                      </div>
+                      <div className='contactUs__form-item'>
+                        <InputField
+                          labelConfig={{
+                            inputLbl: 'Email ID',
+                            inputId: 'email_id_host'
+                          }}
+                          handleInput={() => {}}
+                          registerfuction={register}
+                          components={<ValidationText validationText={'error msg'} />}
+                          extraAttri={{
+                            type: 'email',
+                            inputmode: 'email'
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className='contactUs__form-row'>
+                    <div className='contactUs__form-grid'>
+                      <div className='contactUs__form-item'>
+                        <SelectField
+                          labelConfig={{
+                            inputLbl: 'What service are you looking for?',
+                            inputID: 'numbering_system'
+                          }}
+                          parentExtraCls={'select__native'}
+                          options={[
+                            {
+                              categoryLbl: 'Guest Count',
+                              category: [
+                                {
+                                  value: 1,
+                                  label: '5 - 10 guests'
+                                },
+                                { value: 2, label: '10 - 20 guests' }
+                              ]
+                            }
+                          ]}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className='contactUs__form-row'>
+                    <div className='contactUs__form-grid'>
+                      <div className='contactUs__form-item'>
+                        <InputTextarea
+                          labelConfig={{
+                            inputLbl: 'Message',
+                            inputId: 'message_host'
+                          }}
+                          handleInput={() => {}}
+                          registerfuction={register}
+                          components={<ValidationText validationText={'error msg'} />}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className='contactUs__form-row'>
+                    <div className='contactUs__form-grid'>
+                      <div className='contactUs__form-item'>
+                        <div className='contactUs__form-cta'>
+                          <Button type='submit' variant={'primaryDark'}>
+                            Submit
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
               {false && <ToastMessage open={true} type={''} message={'Form Submit Successfully'} />}
               <div className='contactUs__notes'>
