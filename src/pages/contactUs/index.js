@@ -6,12 +6,13 @@ import InputField from 'components/ui/inputField';
 import InputTextarea from 'components/ui/inputTextarea';
 import SelectField from 'components/ui/selectField';
 import ToastMessage from 'components/ui/toastMessage';
-import React from 'react';
+import React, { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 const ContactUs = ({ data }) => {
+  const [successFormSubmit, setSuccessFormSubmit] = useState(false);
   const schema = yup.object({
     fName_host: yup.string().required('First name is required'),
     lName_host: yup.string().required('Last name is required'),
@@ -20,11 +21,7 @@ const ContactUs = ({ data }) => {
       .matches(/^\d{10}$/, 'Contact must be a 10-digit number')
       .required('Contact number is required'),
     email_id_host: yup.string().email('Invalid email').required('Email is required'),
-    guest_count_host: yup
-      .number()
-      .required('Select Guest count')
-      .typeError('Select Guest count')
-      .notOneOf([0, ''], 'Select Guest count'),
+    guest_count_host: yup.number().nullable().notOneOf([0, ''], 'Select Guest count'),
     message_host: yup
       .string()
       .min(10, 'Message must be at least 10 characters')
@@ -34,13 +31,18 @@ const ContactUs = ({ data }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors, isValid }
   } = useForm({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schema),
+    mode: 'onChnage',
+    defaultValues: {
+      guest_count_host: null
+    }
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    setSuccessFormSubmit(true);
   };
 
   return (
@@ -179,7 +181,7 @@ const ContactUs = ({ data }) => {
                     <div className='contactUs__form-grid'>
                       <div className='contactUs__form-item'>
                         <div className='contactUs__form-cta'>
-                          <Button type='submit' variant={'primaryDark'}>
+                          <Button type='submit' variant={'primaryDark'} disabled={!isValid}>
                             Submit
                           </Button>
                         </div>
@@ -188,7 +190,7 @@ const ContactUs = ({ data }) => {
                   </div>
                 </form>
               </div>
-              {false && <ToastMessage open={true} type={''} message={'Form Submit Successfully'} />}
+              {successFormSubmit && <ToastMessage open={true} type={1} message={'Form Submit Successfully'} />}
               <div className='contactUs__notes'>
                 <div className='contactUs__dtls'>
                   <div>
