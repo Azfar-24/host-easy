@@ -1,13 +1,11 @@
 import LetConnect from 'components/letConnect';
 import SectionWrap from 'components/sectionWrap';
-import Anchor from 'components/ui/anchor';
 import Button from 'components/ui/button';
 import CustomLink from 'components/ui/customLink';
 import InputField from 'components/ui/inputField';
 import InputTextarea from 'components/ui/inputTextarea';
 import SelectField from 'components/ui/selectField';
 import ToastMessage from 'components/ui/toastMessage';
-import ValidationText from 'components/ui/validationText';
 import React from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
@@ -15,12 +13,22 @@ import * as yup from 'yup';
 
 const ContactUs = ({ data }) => {
   const schema = yup.object({
-    username: yup.string().required('Username is required'),
-    email: yup.string().email('Invalid email address').required('Email is required'),
-    password: yup
+    fName_host: yup.string().required('First name is required'),
+    lName_host: yup.string().required('Last name is required'),
+    contactNumber_host: yup
       .string()
-      .min(6, 'Password must be at least 6 characters')
-      .required('Password is required')
+      .matches(/^\d{10}$/, 'Contact must be a 10-digit number')
+      .required('Contact number is required'),
+    email_id_host: yup.string().email('Invalid email').required('Email is required'),
+    guest_count_host: yup
+      .number()
+      .required('Select Guest count')
+      .typeError('Select Guest count')
+      .notOneOf([0, ''], 'Select Guest count'),
+    message_host: yup
+      .string()
+      .min(10, 'Message must be at least 10 characters')
+      .required('Message is required')
   });
 
   const {
@@ -34,8 +42,6 @@ const ContactUs = ({ data }) => {
   const onSubmit = (data) => {
     console.log(data);
   };
-
-  console.log(errors);
 
   return (
     <>
@@ -67,7 +73,8 @@ const ContactUs = ({ data }) => {
                           }}
                           handleInput={() => {}}
                           registerfuction={register}
-                          components={<ValidationText validationText={'error msg'} />}
+                          validationConfig={{ errMsg: errors?.fName_host?.message }}
+                          inputValidate={errors?.fName_host?.message}
                         />
                       </div>
                       <div className='contactUs__form-item'>
@@ -78,7 +85,8 @@ const ContactUs = ({ data }) => {
                           }}
                           handleInput={() => {}}
                           registerfuction={register}
-                          components={false && <ValidationText validationText={'error msg'} />}
+                          validationConfig={{ errMsg: errors?.lName_host?.message }}
+                          inputValidate={errors?.lName_host?.message}
                         />
                       </div>
                     </div>
@@ -93,7 +101,8 @@ const ContactUs = ({ data }) => {
                           }}
                           handleInput={() => {}}
                           registerfuction={register}
-                          components={<ValidationText validationText={'error msg'} />}
+                          validationConfig={{ errMsg: errors?.contactNumber_host?.message }}
+                          inputValidate={errors?.contactNumber_host?.message}
                           extraAttri={{
                             type: 'tel',
                             inputmode: 'numeric'
@@ -108,7 +117,8 @@ const ContactUs = ({ data }) => {
                           }}
                           handleInput={() => {}}
                           registerfuction={register}
-                          components={<ValidationText validationText={'error msg'} />}
+                          validationConfig={{ errMsg: errors?.email_id_host?.message }}
+                          inputValidate={errors?.email_id_host?.message}
                           extraAttri={{
                             type: 'email',
                             inputmode: 'email'
@@ -123,13 +133,17 @@ const ContactUs = ({ data }) => {
                         <SelectField
                           labelConfig={{
                             inputLbl: 'What service are you looking for?',
-                            inputID: 'numbering_system'
+                            inputID: 'guest_count_host'
                           }}
                           parentExtraCls={'select__native'}
                           options={[
                             {
                               categoryLbl: 'Guest Count',
                               category: [
+                                {
+                                  value: '',
+                                  label: 'Guest Count'
+                                },
                                 {
                                   value: 1,
                                   label: '5 - 10 guests'
@@ -138,6 +152,9 @@ const ContactUs = ({ data }) => {
                               ]
                             }
                           ]}
+                          registerFunction={register}
+                          validationConfig={{ errMsg: errors?.email_id_host?.message }}
+                          inputValidate={errors?.email_id_host?.message}
                         />
                       </div>
                     </div>
@@ -152,7 +169,8 @@ const ContactUs = ({ data }) => {
                           }}
                           handleInput={() => {}}
                           registerfuction={register}
-                          components={<ValidationText validationText={'error msg'} />}
+                          validationConfig={{ errMsg: errors?.message_host?.message }}
+                          inputValidate={errors?.message_host?.message}
                         />
                       </div>
                     </div>
