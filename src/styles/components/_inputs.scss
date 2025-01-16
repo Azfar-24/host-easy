@@ -184,19 +184,19 @@
     background: var(--input-bg);
     border: var(--border-1) solid var(--input-outline);
     @extend %borRad6 !optional;
-    @extend %regularFF !optional;
+    @extend %mediumFF !optional;
     @include transition(border 0.1s linear);
-    @include setProperty(font-size, 12);
+    @include setProperty(font-size, 16);
     &::placeholder {
       font-family: var(--regular-ff);
       font-style: italic;
       color: var(--neutral-3);
-      @include setProperty(font-size, 12);
+      @include setProperty(font-size, 16);
     }
   }
   textarea {
-    height: auto;
     resize: none;
+    @include setProperty(height, 100);
   }
   select {
     cursor: pointer;
@@ -204,20 +204,22 @@
     display: block;
     height: var(--input-height);
     width: 100%;
-    color: var(--primary-3);
-    background-color: var(--neutral-2);
-    border: var(--border-1) solid var(--neutral-1);
+    background-color: var(--input-bg);
     -webkit-appearance: none;
     appearance: none;
     background-image: var(--select-box-icon);
-    background-position: 96%;
+    background-position: 98%;
     background-repeat: no-repeat;
-    @extend %regularFF !optional;
-
+    color: var(--input-text);
+    border: var(--border-1) solid var(--input-outline);
+    @extend %borRad6 !optional;
+    @extend %mediumFF !optional;
+    @include transition(border 0.1s linear);
+    @include setProperty(font-size, 16);
     option {
       color: var(--neutral-3);
       font: -moz-pull-down-menu;
-      @extend %regularFF !optional;
+      @extend %mediumFF !optional;
       padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
       background: var(--neutral-6);
     }

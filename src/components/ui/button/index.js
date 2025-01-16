@@ -12,6 +12,7 @@ const button = cva('', {
     leadingIcon: {
       true: 'icon--leading'
     },
+    onlyIcon: { true: 'btn btn__icon' },
     selected: {
       true: 'selected'
     },
@@ -20,8 +21,7 @@ const button = cva('', {
       primaryDark: 'btn btn__primary-dark',
       secondary: 'btn btn__secondary',
       primaryLightLink: 'btn btn__primary-linkLight',
-      primaryDarkLink: 'btn btn__primary-linkDark',
-      onlyIcon: 'btn btn__icon'
+      primaryDarkLink: 'btn btn__primary-linkDark'
     },
     fullWidth: {
       true: 'btn--fullWidth'
@@ -43,6 +43,7 @@ const Button = ({
   children,
   leadingIcon,
   icon,
+  onlyIcon,
   classes,
   trackingKey,
   transKey,
@@ -54,7 +55,7 @@ const Button = ({
       track-event={trackingKey ? serialize(trackingKey) : ''}
       disabled={disabled}
       className={clsx(
-        button({ variant, size, selected, disabled, leadingIcon, fullWidth }),
+        button({ variant, size, selected, disabled, leadingIcon, fullWidth, onlyIcon }),
         classes
       )}
       {...restProps}

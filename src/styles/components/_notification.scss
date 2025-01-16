@@ -2,21 +2,23 @@
 .notification {
   background: var(--nofication-bg);
   border: var(--border-1) solid var(--notification-stroke);
-  padding: calc(var(--gutter-space) * 2) calc(var(--gutter-space) * 4);
+  padding: calc(var(--gutter-space) * 6);
   gap: calc(var(--gutter-space) * 2);
   justify-content: center;
   align-items: center;
   position: fixed;
   top: auto;
   bottom: calc(var(--gutter-space) * 8);
-  left: 0;
-  right: 0;
+  left: auto;
+  right: calc(var(--gutter-space) * 8);
   z-index: 9999;
   max-width: max-content;
   width: 100%;
   margin: 0 auto;
+  @extend %mediumFF !optional;
   @extend %flexbox !optional;
-  @extend %borRad100 !optional;
+  @extend %borRad24 !optional;
+  @include setProperty(font-size, 18);
   &.in {
     z-index: 9999999;
     @include opacity(1);
@@ -33,8 +35,9 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
-    @include setProperty(width, 24);
-    @include setProperty(height, 24);
+    @include setProperty(width, 32);
+    @include setProperty(height, 32);
+    @include setProperty(font-size, 24);
     @extend %flexbox !optional;
     @extend %borRad100 !optional;
   }
@@ -43,26 +46,26 @@
   &__content {
   }
   &__cta {
-    align-self: start;
     .btn {
-      --cta-height: 24px;
       color: var(--notification-icon);
-      justify-content: flex-end;
+      // justify-content: flex-end;
       border-radius: 0 !important;
     }
   }
   &.success {
-    --accent-success: var(--nofication-bg);
+    background: var(--accent-success);
     .notification__icon {
-      --accent-success: hsla(145, 75%, 41%, 1);
-      background: var(--accent-success);
+      background: var(--neutral-1);
     }
   }
   &.danger {
-    --accent-danger: var(--nofication-bg);
+    background: var(--accent-error);
     .notification__icon {
-      --accent-danger: hsla(360, 81%, 58%, 1);
-      background: var(--accent-danger);
+      background: var(--neutral-1);
     }
+  }
+  &.warning {
+    background: var(--accent-warning);
+    color: var(--neutral-1);
   }
 }

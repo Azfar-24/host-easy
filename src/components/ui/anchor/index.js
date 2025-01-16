@@ -15,9 +15,15 @@ const anchorCVA = cva('', {
       true: 'selected'
     },
     variant: {
-      primary: 'btn btn__primary btn__primary--link',
-      secondary: 'btn btn__secondary btn__secondary--link',
+      primaryLight: 'btn btn__primary-light',
+      primaryDark: 'btn btn__primary-dark',
+      secondary: 'btn btn__secondary',
+      primaryLightLink: 'btn btn__primary-linkLight',
+      primaryDarkLink: 'btn btn__primary-linkDark',
       onlyIcon: 'btn btn__icon'
+    },
+    fullWidth: {
+      true: 'btn--fullWidth'
     },
     size: {
       sm: 'btn--sm',

@@ -4,13 +4,15 @@ import Typo from '../typo';
 const ValidationText = ({ customCls, errMsg, transErrMsg }) => {
   return (
     <>
-      <Typo
-        transKey={transErrMsg}
-        component={'div'}
-        className={`errMsg ${customCls ? customCls : ''}`}
-      >
-        {errMsg}
-      </Typo>
+      {errMsg && (
+        <Typo
+          transKey={transErrMsg}
+          component={'div'}
+          className={`errMsg ${customCls ? customCls : ''}`}
+        >
+          {errMsg}
+        </Typo>
+      )}
     </>
   );
 };

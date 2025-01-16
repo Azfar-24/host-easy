@@ -30,7 +30,7 @@ const ToastMessage = ({
           clsName: 'success',
           lbl: (
             <>
-              <i className='sii-tick'></i>
+              <i className='he1-tick'></i>
             </>
           )
         };
@@ -40,14 +40,19 @@ const ToastMessage = ({
           clsName: 'danger',
           lbl: (
             <>
-              <i className='sii-close'></i>
+              <i className='he1-close'></i>
             </>
           )
         };
 
       case 3:
         return {
-          clsName: 'warning'
+          clsName: 'warning',
+          lbl: (
+            <>
+              <i className='he1-info'></i>
+            </>
+          )
         };
 
       default:
@@ -75,9 +80,10 @@ const ToastMessage = ({
           {handleClose && (
             <div className='notification__cta'>
               <Button
-                variant={'onlyIcon'}
+                variant={'primaryLight '}
+                onlyIcon={true}
                 onClick={() => handleClose()}
-                icon={'sii-close'}
+                icon={'he1-close'}
               ></Button>
             </div>
           )}

@@ -12,6 +12,7 @@ import ServiceDetails from 'pages/serviceDetails';
 import EventDetails from 'pages/eventDetails';
 import Helper from 'pages/helper';
 import Events from 'pages/events';
+import ContactUs from 'pages/contactUs';
 
 const AppLayout = lazy(() => import(/* webpackChunkName: "AppLayout" */ '../components/applayout'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ 'pages/Home'));
@@ -50,6 +51,10 @@ const childRoutes = [
   {
     path: routes.tnc.path,
     element: <TnC />
+  },
+  {
+    path: routes.contactUs.path,
+    element: <ContactUs />
   },
   {
     path: '*',

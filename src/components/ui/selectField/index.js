@@ -27,9 +27,15 @@ const SelectField = ({
         <div className='select__field'>
           <select ref={ref} {...rest} {...extraAttri}>
             {options.map((option, index) => (
-              <option key={index} value={option.value}>
-                {option.label}
-              </option>
+              <optgroup label={option.categoryLbl} key={index}>
+                {option.category.map((item, index) => {
+                  return (
+                    <option key={index} value={item.value}>
+                      {item.label}
+                    </option>
+                  );
+                })}
+              </optgroup>
             ))}
           </select>
           <ValidationText {...validationConfig} />

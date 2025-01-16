@@ -9,14 +9,13 @@ const linkProps = cva('', {
     disabled: {
       true: 'disabled'
     },
-
+    onlyIcon: { true: 'btn btn__icon' },
     variant: {
       primaryLight: 'btn btn__primary-light',
       primaryDark: 'btn btn__primary-dark',
       secondary: 'btn btn__secondary',
       primaryLightLink: 'btn btn__primary-linkLight',
-      primaryDarkLink: 'btn btn__primary-linkDark',
-      onlyIcon: 'btn btn__icon'
+      primaryDarkLink: 'btn btn__primary-linkDark'
     },
     fullWidth: {
       true: 'btn--fullWidth'
@@ -30,6 +29,7 @@ function CustomLink({
   disabled,
   fullWidth,
   classes,
+  onlyIcon,
   redirectionURL,
   restProps
 }) {
@@ -38,7 +38,7 @@ function CustomLink({
     <>
       <Link
         to={redirectionURL}
-        className={clsx(linkProps({ variant, disabled, fullWidth }), classes)}
+        className={clsx(linkProps({ variant, disabled, fullWidth, onlyIcon }), classes)}
         {...restProps}
       >
         {children}

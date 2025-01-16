@@ -1,4 +1,4 @@
-@use '../config'as *;
+@use '../config' as *;
 
 .btn {
   gap: var(--gutter-space);
@@ -19,11 +19,13 @@
   @extend %flexbox !optional;
   @extend %buttonReset !optional;
   @extend %borRad100 !optional;
-  @include transition(border 0.2s linear,
+  @include transition(
+    border 0.2s linear,
     padding 0.1s linear,
     box-shadow 0.1s linear,
     background-color 0.1s linear,
-    color 0.1s linear);
+    color 0.1s linear
+  );
 
   &__innerChild {
     gap: var(--gutter-space);
@@ -48,7 +50,6 @@
     &:hover {
       background: var(--surface-neutral-4);
       box-shadow: 0px 8px 24px 0px hsla(0, 0%, 0%, 0.25);
-
     }
 
     &:active:focus {
@@ -63,7 +64,6 @@
     &:hover {
       background: hsla(11, 99%, 61%, 1);
       box-shadow: 0px 8px 24px 0px hsla(0, 0%, 0%, 0.25);
-
     }
 
     &:active:focus {
@@ -83,6 +83,20 @@
     }
   }
 
+  &__primary-linkLight {
+    color: hsla(0, 0%, 49%, 1);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover {
+      color: hsla(0, 0%, 49%, 1);
+    }
+
+    &:active:focus {
+      color: hsla(0, 0%, 49%, 1);
+    }
+  }
   &__primary-linkDark {
     color: hsla(11, 99%, 61%, 1);
     border-radius: 0;
@@ -119,7 +133,7 @@
 
   &:disabled,
   &.disabled {
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
   }
 
@@ -131,7 +145,6 @@
   &--fullWidth {
     width: 100%;
   }
-
 }
 
 .linkDark {

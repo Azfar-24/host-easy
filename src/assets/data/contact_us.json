@@ -1,0 +1,18 @@
+{
+  "heroSection": {
+    "title": "Contact Us",
+    "description": [
+      {
+        "caption": "Have questions or need assistance? Reach out to us—we’re here to help make your event unforgettable."
+      }
+    ]
+  },
+  "heroSectionRegister": {
+    "title": "Register as a Helper",
+    "description": [
+      {
+        "caption": "Host Hand / Bartender Questionnaire"
+      }
+    ]
+  }
+}

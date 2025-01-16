@@ -37,7 +37,6 @@
   --accent-info: hsla(195, 100%, 50%, 1);
   --accent-1: hsla(49, 89%, 60%, 1);
 
-
   /* primary-cta */
   --cta-primary: linear-gradient(179.57deg, hsl(49, 89%, 60%) 0.37%, hsl(43, 74%, 42%) 99.63%);
   --cta-primary-text: hsla(30, 10%, 8%, 1);
@@ -69,7 +68,7 @@
 
   /* navbar */
   --nav-bg: transparent;
-  --nav-text: hsla(0, 0%, 100%, .6);
+  --nav-text: hsla(0, 0%, 100%, 0.6);
   --nav-active-stroke: hsla(0, 0%, 100%, 1);
   --nav-active-bg: transparent;
   --nav-active-text: hsla(0, 0%, 100%, 1);
@@ -109,9 +108,9 @@
 
   // input
   --input-bg: hsla(0, 0%, 100%, 1);
-  --input-outline: hsla(0, 0%, 72%, 1);
+  --input-outline: hsla(0, 0%, 0%, 0.2);
   --input-text: hsla(0, 0%, 0%, 1);
-  --input-lbl: hsla(240, 2%, 48%, 1);
+  --input-lbl: hsla(0, 0%, 0%, 0.5);
   --char-limit: hsla(205, 16%, 38%, 1);
 
   //Radio Btn

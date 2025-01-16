@@ -660,3 +660,79 @@
     @extend %gridbox !optional;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+.contactUs {
+  &__section {
+    padding-left: calc(var(--gutter-space) * 12);
+    padding-right: calc(var(--gutter-space) * 12);
+  }
+  &__grid {
+    gap: calc(var(--gutter-space) * 6);
+    justify-content: stretch;
+    align-items: stretch;
+    @extend %flexbox !optional;
+    &-lhs {
+      height: 100%;
+      flex-grow: 1;
+      flex-basis: 100%;
+    }
+    &-rhs {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      @include setProperty(width, 400);
+    }
+  }
+  &__dtls {
+    gap: calc(var(--gutter-space) * 4);
+    @extend %gridbox !optional;
+    &-lbl {
+      margin-bottom: var(--gutter-space);
+      color: hsla(0, 0%, 0%, 0.5);
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 14);
+    }
+    &-value {
+      color: hsla(0, 0%, 49%, 1);
+      justify-content: space-between;
+      align-items: center;
+      @extend %mediumFF !optional;
+      @include setProperty(font-size, 12);
+      @extend %flexbox !optional;
+
+      .btn {
+        height: auto;
+      }
+    }
+  }
+  &__form {
+    &-row {
+      &:not(:last-of-type) {
+        margin-bottom: calc(var(--gutter-space) * 6);
+      }
+    }
+    &-grid {
+      gap: calc(var(--gutter-space) * 8);
+      justify-content: flex-start;
+      align-items: flex-start;
+      @extend %flexbox !optional;
+    }
+    &-item {
+      flex-grow: 1;
+    }
+    &-cta {
+      justify-content: center;
+      align-items: center;
+      @extend %flexbox !optional;
+    }
+  }
+  &__notes {
+    margin-top: calc(var(--gutter-space) * 10);
+    .contactUs__dtls {
+      gap: calc(var(--gutter-space) * 8);
+    }
+  }
+}
+>>>>>>> Stashed changes
